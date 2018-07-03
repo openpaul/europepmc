@@ -151,10 +151,15 @@ def main():
     toVisit = [(args.id, args.source)]
     visited = []
     edges = []
+    j = 0
     while i < args.count:
-        for v in toVisit:
+        j = 0
+        k = len(toVisit)
+        while j < k:
+            v = toVisit[j]
             if v in visited:
                 continue
+            j = j+1
             newedges = e.references(v[0], v[1])
             for edge in newedges:
                 p = (edge[2], edge[3])
@@ -167,6 +172,28 @@ def main():
     g = Graph()
 
     # get all vertices
+    idx = []
+    for e in edges:
+        p1 = (e[0], e[1])
+        p2 = (e[2],e[3])
+        if p1 not in idx:
+            idx.append(p1)
+        if p2 not in idx:
+            idx.append(p2)
+        # now all thats left is getting the name to the node 
+        # at some point
+        # will it be the title of the paper or better Bla et al (2018)?
+    for i in idx:
+        key = "{}_{}".format(i[0], i[1])
+        g.add_vertex(key, label = key)
+    
+    for i in edges:
+        s = "{}_{}".format(i[0], i[1])
+        t = "{}_{}".format(i[2], i[3])
+        g.add_edge(s,t)
+
+    summary(g)
+    g.save(args.output + ".graphml", format="graphml")
 
     '''
     # make vertices
