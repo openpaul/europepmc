@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import colorsys
 import argparse
 import json
 import requests
@@ -13,6 +14,10 @@ from time import sleep
 import os, pickle    
 
 import time
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.cluster import KMeans
+from sklearn.metrics import adjusted_rand_score
 
 today = int(time.time())
 
@@ -177,6 +182,45 @@ class epmcBuffer:
 
 
 
+def get_N_HexCol(N=5):
+    HSV_tuples = [(x * 1.0 / N, 0.5, 0.5) for x in range(N)]
+    hex_out = []
+    for rgb in HSV_tuples:
+        rgb = map(lambda x: int(x * 255), colorsys.hsv_to_rgb(*rgb))
+        hex_out.append('#%02x%02x%02x' % tuple(rgb))
+    return hex_out
+
+# from https://pythonprogramminglanguage.com/kmeans-elbow-method/
+def clusterByTitle(g, k = 5):
+
+    titles = []
+    for v in g.vs:
+        titles.append(v["title"])
+
+    vectorizer = TfidfVectorizer(stop_words='english')
+    X = vectorizer.fit_transform(titles)
+    model = KMeans(n_clusters=k, 
+                   init='k-means++', max_iter=100, n_init=1)
+    model.fit(X)
+
+    # Get the class and assign color hexes to 
+    # the graph vertices
+    classes = model.predict(X)
+    cols = get_N_HexCol(k)
+
+    g.vs["color"] = ([cols[i] for i in classes ])
+    g.vs["clusterK"] = classes
+
+    order_centroids = model.cluster_centers_.argsort()[:, ::-1]
+    terms = vectorizer.get_feature_names()
+    for i in range(k):
+        print("Cluster %d:" % i),
+        for ind in order_centroids[i, :10]:
+            print(' %s' % terms[ind]),
+
+
+    return(g)
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -198,6 +242,9 @@ def main():
             help = "Minimal Number of edges a nodes needs to be shown", default = 2)
     parser.add_argument("-z", "--cited", type = int,
             help = "Minimal Number of citations nodes needs to be shown", default = 2)
+
+    parser.add_argument("-k", "--kmeans", type = int,
+            help = "K for means clustering, 0 for deactivating", default = 10)
     parser.add_argument("-v", "--verbose", type = bool, 
                             help="increase output verbosity", default = False)
     args = parser.parse_args()
@@ -256,6 +303,8 @@ def main():
             g.add_edge(s,t)
 
     g.simplify()
+    if args.kmeans > 0:
+        g = clusterByTitle(g, args.kmeans)
     summary(g)
 
 
