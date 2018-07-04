@@ -16,6 +16,28 @@ import time
 
 today = int(time.time())
 
+
+def etAl(s, d = None):
+    '''format a name string to et al ciation'''
+    n = ""
+    if s.count(",") > 1:
+        # many authors, cant show all
+        n = s.split(",")[0].split(" ")[0]
+        n = "{} et al.".format(n)
+    elif s.count(",") == 1:
+        # two authors, show both
+        m = s.split(",")
+        ns = []
+        for i in m:
+            ns.append(i.split(" ")[0])
+        n = "{} and {}".format(ns)
+    else:
+        # one author
+        n = s.split(" ")[0]
+    if d != None:
+        n = "{} ({})".format(n, d)
+    return(n)
+
 class epmc:
     def __init__(self):
         self.useragent = "epmc.py"
@@ -37,7 +59,8 @@ class epmc:
 
     def citations(self, id, cl = "MED"):
         '''fetch al pubilcations that cited this one'''
-        return()
+        res = requests.get(url  = "https://www.ebi.ac.uk/europepmc/webservices/rest/{}/{}/citations?page=1&pageSize=1&format=json".format(cl, id))
+        return(res.json())
 
 class epmcBuffer:
     '''this class is to be used instead of th pure
@@ -46,7 +69,8 @@ class epmcBuffer:
     if a certain, user defined, number of days has passed'''
     def __init__(self):
         self.epmc = epmc()
-        self.daylimit = 5
+        self.daylimit = 5 # number of days we trust the number of citations did not change
+        self.reflimit = 60 # number of days we trust the number of references did not change
         self.DB()
     
     def DB(self, dbname = ".epmc.db"):
@@ -56,12 +80,25 @@ class epmcBuffer:
         # create all tables that we need
         self.createTable()
         
-    
+    def updateCitationCount(self):
+        '''for each paper update the citation count for future reference'''
+        sql = "SELECT id, source, citRet FROM paper"
+        res = self.c.execute(sql).fetchall()
+        print("Checking citations of {} papers".format(len(res)))
+        for r in res:
+            if r[2] - today > (60*60* 24 * self.daylimit):
+                # fetch new from the interweb:
+                cits = self.epmc.citations(r[0], r[1])
+                ncits = cits['hitCount']
+                self.c.execute("UPDATE `paper` SET citedBy=?, citRet=? WHERE id=? AND source=?", (ncits, today, r[0], r[1]))
+        self.db.commit()
+
+
     def createTable(self):
         # a single table to hold the information
  
         self.c.execute('''CREATE TABLE IF NOT EXISTS paper 
-                          (id text , source text,  title text, author TEXT, year INT, refRet INT DEFAULT 999999999999999, citRet INT DEFAULT 999999999999999 )''')
+                          (id text , source text,  title text, author TEXT, year INT,citedBy INT DEFAULT 0, refRet INT DEFAULT 999999999999999, citRet INT DEFAULT 999999999999999 )''')
         self.c.execute('''CREATE TABLE IF NOT EXISTS `edges` 
                           ( `FROM` text, `FSOURCE` text,  `TO`  text, `TSOURCE` text )''')
         self.db.commit()
@@ -83,7 +120,7 @@ class epmcBuffer:
             fetchFromWeb = False
             # we already have the paper in the DB
             # check if its to old
-            if r[5] - today > (self.daylimit * 60 * 60 * 24): # the magic number 6 is the field number fo refRet
+            if r[6] - today > (self.reflimit * 60 * 60 * 24): # the magic number 6 is the field number fo refRet
                 # delete this entry and fetch new
                 self.c.execute('DELETE FROM `edges` WHERE `FROM` = ? AND `FSOURCE`= ? ',
                         (id, source))
@@ -119,7 +156,16 @@ class epmcBuffer:
         refresults = self.c.execute("SELECT * FROM `edges` WHERE `FROM`=? AND `FSOURCE`=?",(id, source))
         print("checked ", id, fetchFromWeb)
         return(refresults.fetchall())
-        
+
+    def nodes(self):
+        '''return all nodes with citation values'''
+        res = self.c.execute("SELECT id, source, citedBy, author, year FROM paper").fetchall()
+        n = {}
+        for r in res:
+            n["{}_{}".format(r[0],r[1])] = (r[2], etAl(r[3], r[4]))
+
+        return(n)
+
 
 
 
@@ -168,25 +214,17 @@ def main():
             edges.extend(newedges)
         i = i + 1
         print(i)
+    e.updateCitationCount()
     # now that we have the data we can build a graph if we want
     g = Graph()
 
+    nodes = e.nodes()
     # get all vertices
-    idx = []
-    for e in edges:
-        p1 = (e[0], e[1])
-        p2 = (e[2],e[3])
-        if p1 not in idx:
-            idx.append(p1)
-        if p2 not in idx:
-            idx.append(p2)
-        # now all thats left is getting the name to the node 
-        # at some point
-        # will it be the title of the paper or better Bla et al (2018)?
-    for i in idx:
-        key = "{}_{}".format(i[0], i[1])
-        g.add_vertex(key, label = key)
+    for key in nodes:
+        g.add_vertex(key, label = nodes[key[0]], size = nodes[key][1])
     
+    
+
     for i in edges:
         s = "{}_{}".format(i[0], i[1])
         t = "{}_{}".format(i[2], i[3])
