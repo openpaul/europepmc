@@ -85,12 +85,19 @@ class epmcBuffer:
         sql = "SELECT id, source, citRet FROM paper"
         res = self.c.execute(sql).fetchall()
         print("Checking citations of {} papers".format(len(res)))
+        i = 0
+        j = 0
         for r in res:
             if r[2] - today > (60*60* 24 * self.daylimit):
                 # fetch new from the interweb:
                 cits = self.epmc.citations(r[0], r[1])
                 ncits = cits['hitCount']
                 self.c.execute("UPDATE `paper` SET citedBy=?, citRet=? WHERE id=? AND source=?", (ncits, today, r[0], r[1]))
+                i = i + 1
+                if i % 100 == 0:
+                    self.db.commit()
+                    print("Saving citation of 100 at j = {}".format(j))
+            j = j + 1
         self.db.commit()
 
 
@@ -159,10 +166,11 @@ class epmcBuffer:
 
     def nodes(self):
         '''return all nodes with citation values'''
-        res = self.c.execute("SELECT id, source, citedBy, author, year FROM paper").fetchall()
+        res = self.c.execute("SELECT id, source, citedBy, author, year, title FROM paper").fetchall()
         n = {}
         for r in res:
-            n["{}_{}".format(r[0],r[1])] = (etAl(r[3], r[4]), r[2])
+            n["{}_{}".format(r[0],r[1])] = {"name": etAl(r[3],r[4]), "cited": r[2],\
+                                            "title": r[5]}
 
         return(n)
 
@@ -186,6 +194,10 @@ def main():
     parser.add_argument("-d","--db" , type=str,
             help="Name of the db file", default = "cache.sqlite")
 
+    parser.add_argument("-t", "--trim", type = int,
+            help = "Minimal Number of edges a nodes needs to be shown", default = 2)
+    parser.add_argument("-z", "--cited", type = int,
+            help = "Minimal Number of citations nodes needs to be shown", default = 2)
     parser.add_argument("-v", "--verbose", type = bool, 
                             help="increase output verbosity", default = False)
     args = parser.parse_args()
@@ -219,41 +231,36 @@ def main():
     g = Graph()
 
     nodes = e.nodes()
-    # get all vertices
-    for key in nodes:
-        g.add_vertex(key, label = nodes[key][0], size = nodes[key][1])
-    
-    
 
+    # for each node, we need to cound the number of related edges
+    for key in nodes:
+        nodes[key]["edges"] = 0
+    
     for i in edges:
         s = "{}_{}".format(i[0], i[1])
         t = "{}_{}".format(i[2], i[3])
-        g.add_edge(s,t)
+        nodes[s]["edges"] = nodes[s]["edges"] + 1
 
+    # get all vertices
+    for key in nodes:
+        if nodes[key]["edges"] >= args.trim and nodes[key]["cited"] >= args.cited:
+            g.add_vertex(key, label = nodes[key]["name"], size = nodes[key]["cited"],\
+                    title = nodes[key]["title"])
+    
+    
+    for i in edges:
+        s = "{}_{}".format(i[0], i[1])
+        t = "{}_{}".format(i[2], i[3])
+        if nodes[s]["edges"] >= args.trim and nodes[t]["edges"] >= args.trim \
+           and nodes[s]["cited"] >= args.cited and nodes[t]["cited"] >= args.cited:
+            g.add_edge(s,t)
+
+    g.simplify()
     summary(g)
+
+
     g.save(args.output + ".graphml", format="graphml")
 
-    '''
-    # make vertices
-    for key in db.vertices :
-        g.add_vertex(key, label = db.vertices[key] )
-
-    # get the edges:
-    g.add_edges(db.edges) 
-    summary(g)
-
-    # combine by weight
-    g.es["weight"] = 1
-    g.simplify(combine_edges={"weight": "sum"})
-    #layout = g.layout("kk")
-    #plot(g, layout = layout)
-
-
-
-    g.save(args.output + ".graphml", format="graphml")
-
-
-    db.c.close()
-    '''
+    print(args.trim)
 
 main()
