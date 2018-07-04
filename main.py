@@ -29,8 +29,8 @@ def etAl(s, d = None):
         m = s.split(",")
         ns = []
         for i in m:
-            ns.append(i.split(" ")[0])
-        n = "{} and {}".format(ns)
+            ns.append(i.strip().split(" ")[0])
+        n = "{} and {}".format(ns[0],ns[1])
     else:
         # one author
         n = s.split(" ")[0]
@@ -162,7 +162,7 @@ class epmcBuffer:
         res = self.c.execute("SELECT id, source, citedBy, author, year FROM paper").fetchall()
         n = {}
         for r in res:
-            n["{}_{}".format(r[0],r[1])] = (r[2], etAl(r[3], r[4]))
+            n["{}_{}".format(r[0],r[1])] = (etAl(r[3], r[4]), r[2])
 
         return(n)
 
@@ -221,7 +221,7 @@ def main():
     nodes = e.nodes()
     # get all vertices
     for key in nodes:
-        g.add_vertex(key, label = nodes[key[0]], size = nodes[key][1])
+        g.add_vertex(key, label = nodes[key][0], size = nodes[key][1])
     
     
 
