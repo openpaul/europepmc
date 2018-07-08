@@ -120,7 +120,8 @@ class epmcBuffer:
         self.c.execute('SELECT * FROM `paper` WHERE id=? AND source=?', (res['id'], res['source']))
         r = self.c.fetchone()
         if r == None:
-            self.c.execute('INSERT INTO `paper` (id, source, title, author, year)\
+            if set(['id','source','title','authorString','pubYear']).issubset(res.keys()):
+                self.c.execute('INSERT INTO `paper` (id, source, title, author, year)\
                            VALUES (?, ?, ?, ?, ?)', (res['id'], res['source'], res['title'], res['authorString'], res['pubYear']))
     def references(self, id, source = "MED"):
         '''fetch and return a list of reference ids'''
@@ -157,7 +158,7 @@ class epmcBuffer:
                 for reference in res['referenceList']['reference']:
                     # save metadata of this it if not already
                     # update then the refRet field
-                    if 'id' in reference.keys():
+                    if 'id' in reference.keys() and 'source' in reference.keys():
                         self.c.execute('INSERT INTO `edges` (`FROM`, `FSOURCE`,  `TO`,  `TSOURCE` )  VALUES (?, ?, ?,?)', (id, source, reference['id'], reference['source'] ))
                         self.savePaper(reference)
         self.db.commit()
@@ -166,7 +167,8 @@ class epmcBuffer:
         # this is more simple than maintaining the data over the scope
         # it is also slower
         refresults = self.c.execute("SELECT * FROM `edges` WHERE `FROM`=? AND `FSOURCE`=?",(id, source))
-        print("checked ", id, fetchFromWeb)
+        if fetchFromWeb:
+            print("checked ", id, fetchFromWeb)
         return(refresults.fetchall())
 
     def nodes(self):
