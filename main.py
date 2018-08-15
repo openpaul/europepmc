@@ -12,7 +12,7 @@ from igraph import *
 import sqlite3
 from time import sleep
 import os, pickle    
-
+import sys
 import time
 
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -117,11 +117,15 @@ class epmcBuffer:
                 if i % 100 == 0:
                     self.db.commit()
                     #stats:
-                    percentagedone = round(100* j/total, 1)
-                    print("{}% done ({}/{}) (intermediate saving)".format(percentagedone, j, total))
-            if round(j % total/100, 2) == 0:
+                #    percentagedone = round(100* j/total, 1)
+                #    print("{}% done ({}/{}) (intermediate saving)".format(percentagedone, j, total))
+            if round((100 * j/total),1) % 1 ==  0 or True:
                 percentagedone = round(100* j/total, 1)
-                print("{}% done ({}/{})".format(percentagedone, j, total))
+                s  =("{}% done ({}/{})".format(percentagedone, j, total))
+                sys.stdout.write('\r')
+                # the exact output you're looking for:
+                sys.stdout.write(s)
+                sys.stdout.flush()
             j = j + 1
         self.db.commit()
 
