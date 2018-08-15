@@ -64,7 +64,7 @@ class epmc:
 
     def citations(self, id, cl = "MED"):
         '''fetch al pubilcations that cited this one'''
-        res = requests.get(url  = "https://www.ebi.ac.uk/europepmc/webservices/rest/{}/{}/citations?page=1&pageSize=1&format=json".format(cl, id))
+        res = requests.get(url  = "https://www.ebi.ac.uk/europepmc/webservices/rest/{}/{}/citations?page=1&pageSize={}&format=json".format(cl, id, self.limit))
         return(res.json())
 
 class epmcBuffer:
@@ -72,11 +72,12 @@ class epmcBuffer:
     epmc class. Here request performed previsously
     will be cached in a database and only be requested again 
     if a certain, user defined, number of days has passed'''
-    def __init__(self):
+    def __init__(self,dbname = ".epmc.db", verbose = False):
         self.epmc = epmc()
         self.daylimit = 5 # number of days we trust the number of citations did not change
         self.reflimit = 60 # number of days we trust the number of references did not change
-        self.DB()
+        self.verbose = verbose
+        self.DB(dbname)
     
     def DB(self, dbname = ".epmc.db"):
         # connect to the sqlite db
@@ -89,19 +90,25 @@ class epmcBuffer:
         '''for each paper update the citation count for future reference'''
         sql = "SELECT id, source, citRet FROM paper"
         res = self.c.execute(sql).fetchall()
+        total = len(res)
         print("Checking citations of {} papers".format(len(res)))
         i = 0
         j = 0
         for r in res:
             if r[2] - today > (60*60* 24 * self.daylimit):
                 # fetch new from the interweb:
-                cits = self.epmc.citations(r[0], r[1])
-                ncits = cits['hitCount']
-                self.c.execute("UPDATE `paper` SET citedBy=?, citRet=? WHERE id=? AND source=?", (ncits, today, r[0], r[1]))
+                cits = self.citations(r[0], r[1])
+                #ncits = cits['hitCount']
+                #self.c.execute("UPDATE `paper` SET citedBy=?, citRet=? WHERE id=? AND source=?", (ncits, today, r[0], r[1]))
                 i = i + 1
                 if i % 100 == 0:
                     self.db.commit()
-                    print("Saving citation of 100 at j = {}".format(j))
+                    #stats:
+                    percentagedone = round(100* j/total, 1)
+                    print("{}% done ({}/{}) (intermediate saving)".format(percentagedone, j, total))
+            if j % round(total/100) == 0:
+                percentagedone = round(100* j/total, 1)
+                print("{}% done ({}/{})".format(percentagedone, j, total))
             j = j + 1
         self.db.commit()
 
@@ -123,7 +130,10 @@ class epmcBuffer:
             if set(['id','source','title','authorString','pubYear']).issubset(res.keys()):
                 self.c.execute('INSERT INTO `paper` (id, source, title, author, year)\
                            VALUES (?, ?, ?, ?, ?)', (res['id'], res['source'], res['title'], res['authorString'], res['pubYear']))
-    def references(self, id, source = "MED"):
+                self.db.commit()
+
+
+    def references(self, id, source = "MED", verbose = False):
         '''fetch and return a list of reference ids'''
         # check if id class combi is in databank
         self.c.execute('SELECT * FROM `paper` WHERE id=? AND source=?', (id, source))
@@ -150,6 +160,8 @@ class epmcBuffer:
         
         # here make a call to the original class to query the server
         if fetchFromWeb:
+            if self.verbose:
+                print("need to fetch {} from web".format(id))
             res = self.epmc.references(id, source)
 
             self.c.execute("UPDATE `paper` SET refRet=? WHERE id=? AND source=?", (today, id, source))
@@ -167,8 +179,59 @@ class epmcBuffer:
         # this is more simple than maintaining the data over the scope
         # it is also slower
         refresults = self.c.execute("SELECT * FROM `edges` WHERE `FROM`=? AND `FSOURCE`=?",(id, source))
-        if fetchFromWeb:
+        if fetchFromWeb and self.verbose:
             print("checked ", id, fetchFromWeb)
+        return(refresults.fetchall())
+
+    def citations(self, id, source = "MED"):
+        '''fetch and return a list of reference ids'''
+        # check if id class combi is in databank
+        self.c.execute('SELECT citRet FROM `paper` WHERE id=? AND source=?', (id, source))
+        r = self.c.fetchone()
+        fetchFromWeb = True
+        if r != None:
+            fetchFromWeb = False
+            # we already have the paper in the DB
+            # check if its to old
+            if r[0] - today > (self.reflimit * 60 * 60 * 24): # the magic number 6 is the field number fo refRet
+                # delete this entry and fetch new
+                self.c.execute('DELETE FROM `edges` WHERE `TO` = ? AND `TSOURCE`= ? ',
+                        (id, source))
+                fetchFromWeb = True
+
+        else:
+            # need to insert this paper into the DB
+            possres = self.epmc.search(id)
+            # save all the results in the database, as there is no reason to discard them here
+            if possres['hitCount'] > 0:
+                for res in possres['resultList']['result']:
+                    if 'id' in res.keys():
+                        self.savePaper(res)
+        
+        # here make a call to the original class to query the server
+        if fetchFromWeb:
+            if self.verbose:
+                print("need to fetch ciatations of {} from web".format(id))
+            res = self.epmc.citations(id, source)
+
+            citedBy = res["hitCount"]
+            self.c.execute("UPDATE `paper` SET citRet=?,citedBy=? WHERE id=? AND source=?", (today, citedBy, id, source))
+            # save the result in the database if interesting:
+            if res['hitCount'] > 0:
+                for reference in res['citationList']['citation']:
+                    # save metadata of this it if not already
+                    # update then the refRet field
+                    if 'id' in reference.keys() and 'source' in reference.keys():
+                        self.c.execute('INSERT INTO `edges` (`FROM`, `FSOURCE`,  `TO`,  `TSOURCE` )  VALUES (?, ?, ?,?)', (reference['id'], reference['source'], id, source ))
+                        self.savePaper(reference)
+        self.db.commit()
+
+        # fetch the data we want from the db
+        # this is more simple than maintaining the data over the scope
+        # it is also slower
+        refresults = self.c.execute("SELECT * FROM `edges` WHERE `TO`=? AND `TSOURCE`=?",(id, source))
+        if fetchFromWeb and self.verbose:
+            print("fetched citations of {} ".format( id))
         return(refresults.fetchall())
 
     def nodes(self):
@@ -240,6 +303,8 @@ def main():
     parser.add_argument("-d","--db" , type=str,
             help="Name of the db file", default = "cache.sqlite")
 
+    parser.add_argument("-f", "--future", type = bool, 
+                            help="instead of references use the citations and show how this publiction was recived", default = False)
     parser.add_argument("-t", "--trim", type = int,
             help = "Minimal Number of edges a nodes needs to be shown", default = 2)
     parser.add_argument("-z", "--cited", type = int,
@@ -252,7 +317,7 @@ def main():
     args = parser.parse_args()
 
     # start a new DB server
-    e = epmcBuffer()
+    e = epmcBuffer(dbname = args.db, verbose = args.verbose)
     # now make hops:
     i = 0
     toVisit = [(args.id, args.source)]
@@ -265,9 +330,16 @@ def main():
         while j < k:
             v = toVisit[j]
             if v in visited:
+                if args.verbose:
+                    print("visited this aready")
                 continue
             j = j+1
-            newedges = e.references(v[0], v[1])
+            if args.future:
+                newedges = e.citations(v[0], v[1])
+            else:
+                if args.verbose:
+                    print("fetching references now")
+                newedges = e.references(v[0], v[1])
             for edge in newedges:
                 p = (edge[2], edge[3])
                 if p not in visited:
@@ -275,6 +347,8 @@ def main():
             edges.extend(newedges)
         i = i + 1
         print(i)
+    print("Database done, will now update citation counts for all papers")
+    print("As this is done for the entire database this might take some time")
     e.updateCitationCount()
     # now that we have the data we can build a graph if we want
     g = Graph()
