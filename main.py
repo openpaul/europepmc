@@ -86,16 +86,29 @@ class epmcBuffer:
         # create all tables that we need
         self.createTable()
         
-    def updateCitationCount(self):
+    def updateCitationCount(self, items ):
         '''for each paper update the citation count for future reference'''
         sql = "SELECT id, source, citRet FROM paper"
         res = self.c.execute(sql).fetchall()
-        total = len(res)
-        print("Checking citations of {} papers".format(len(res)))
+        # remove all items that are not in the item list
+        # this should be better than creating an awefull complex sql string
+        # make a id-source list:
+        idsList = []
+        for i in items:
+            idsList.append("-".join(i))
+        i = 0
+        resF = []
+        for r in res:
+            if "-".join(r[0:2]) in idsList:
+                resF.append(r)
+            i = i + 1
+        total = len(resF)
+        del res
+        print("Checking citations of {} papers".format(len(resF)))
         i = 0
         j = 0
-        for r in res:
-            if r[2] - today > (60*60* 24 * self.daylimit):
+        for r in resF:
+            if today - r[2] > (60*60* 24 * self.daylimit):
                 # fetch new from the interweb:
                 cits = self.citations(r[0], r[1])
                 #ncits = cits['hitCount']
@@ -106,7 +119,7 @@ class epmcBuffer:
                     #stats:
                     percentagedone = round(100* j/total, 1)
                     print("{}% done ({}/{}) (intermediate saving)".format(percentagedone, j, total))
-            if j % round(total/100) == 0:
+            if round(j % total/100, 2) == 0:
                 percentagedone = round(100* j/total, 1)
                 print("{}% done ({}/{})".format(percentagedone, j, total))
             j = j + 1
@@ -117,7 +130,7 @@ class epmcBuffer:
         # a single table to hold the information
  
         self.c.execute('''CREATE TABLE IF NOT EXISTS paper 
-                          (id text , source text,  title text, author TEXT, year INT,citedBy INT DEFAULT 0, refRet INT DEFAULT 999999999999999, citRet INT DEFAULT 999999999999999 )''')
+                          (id text , source text,  title text, author TEXT, year INT,citedBy INT DEFAULT 0, refRet INT DEFAULT 0, citRet INT DEFAULT 0 )''')
         self.c.execute('''CREATE TABLE IF NOT EXISTS `edges` 
                           ( `FROM` text, `FSOURCE` text,  `TO`  text, `TSOURCE` text )''')
         self.db.commit()
@@ -143,7 +156,7 @@ class epmcBuffer:
             fetchFromWeb = False
             # we already have the paper in the DB
             # check if its to old
-            if r[6] - today > (self.reflimit * 60 * 60 * 24): # the magic number 6 is the field number fo refRet
+            if today - r[6] > (self.reflimit * 60 * 60 * 24): # the magic number 6 is the field number fo refRet
                 # delete this entry and fetch new
                 self.c.execute('DELETE FROM `edges` WHERE `FROM` = ? AND `FSOURCE`= ? ',
                         (id, source))
@@ -193,7 +206,7 @@ class epmcBuffer:
             fetchFromWeb = False
             # we already have the paper in the DB
             # check if its to old
-            if r[0] - today > (self.reflimit * 60 * 60 * 24): # the magic number 6 is the field number fo refRet
+            if today - r[0] > (self.reflimit * 60 * 60 * 24): # the magic number 6 is the field number fo refRet
                 # delete this entry and fetch new
                 self.c.execute('DELETE FROM `edges` WHERE `TO` = ? AND `TSOURCE`= ? ',
                         (id, source))
@@ -321,7 +334,6 @@ def main():
     # now make hops:
     i = 0
     toVisit = [(args.id, args.source)]
-    visited = []
     edges = []
     j = 0
     while i < args.count:
@@ -329,10 +341,6 @@ def main():
         k = len(toVisit)
         while j < k:
             v = toVisit[j]
-            if v in visited:
-                if args.verbose:
-                    print("visited this aready")
-                continue
             j = j+1
             if args.future:
                 newedges = e.citations(v[0], v[1])
@@ -342,14 +350,12 @@ def main():
                 newedges = e.references(v[0], v[1])
             for edge in newedges:
                 p = (edge[2], edge[3])
-                if p not in visited:
-                    toVisit.append(p)
+                toVisit.append(p)
             edges.extend(newedges)
         i = i + 1
         print(i)
     print("Database done, will now update citation counts for all papers")
-    print("As this is done for the entire database this might take some time")
-    e.updateCitationCount()
+    e.updateCitationCount( items = list(set(toVisit)))
     # now that we have the data we can build a graph if we want
     g = Graph()
 
