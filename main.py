@@ -46,7 +46,7 @@ def etAl(s, d = None):
 class epmc:
     def __init__(self):
         self.useragent = "epmc.py"
-        self.limit      = 10
+        self.limit      = 999 # 1000 is the API limit, we set it one lower just in case
         
     def search(self, q):
         ''' search via the API'''
@@ -60,7 +60,7 @@ class epmc:
         u = "https://www.ebi.ac.uk/europepmc/webservices/rest/{CL}/{ID}/references?pageSize={S}&format=json"
         urlstring = u.format(CL=cl, ID= id, S = self.limit )
         result = requests.get(url = urlstring).json()
-        
+
         # if hit count > self.limit,we need a paged loop
         if result["hitCount"] > self.limit:
             page = 1
@@ -109,7 +109,7 @@ class epmcBuffer:
         
     def updateCitationCount(self, items ):
         '''for each paper update the citation count for future reference'''
-        sql = "SELECT id, source, citRet FROM paper"
+        sql = "SELECT id, source, citedByDate FROM paper"
         res = self.c.execute(sql).fetchall()
         # remove all items that are not in the item list
         # this should be better than creating an awefull complex sql string
@@ -132,14 +132,11 @@ class epmcBuffer:
             if today - r[2] > (60*60* 24 * self.daylimit):
                 # fetch new from the interweb:
                 cits = self.citations(r[0], r[1])
-                #ncits = cits['hitCount']
-                #self.c.execute("UPDATE `paper` SET citedBy=?, citRet=? WHERE id=? AND source=?", (ncits, today, r[0], r[1]))
+
                 i = i + 1
                 if i % 100 == 0:
                     self.db.commit()
-                    #stats:
-                #    percentagedone = round(100* j/total, 1)
-                #    print("{}% done ({}/{}) (intermediate saving)".format(percentagedone, j, total))
+
             if round((100 * j/total),1) % 1 ==  0 or True:
                 percentagedone = round(100* j/total, 1)
                 s  =("{}% done ({}/{})".format(percentagedone, j, total))
@@ -155,12 +152,12 @@ class epmcBuffer:
         # a single table to hold the information
  
         self.c.execute('''CREATE TABLE IF NOT EXISTS paper 
-                          (id text , source text,  title text, author TEXT, year INT,citedBy INT DEFAULT 0, refRet INT DEFAULT 0, citRet INT DEFAULT 0 )''')
+                          (id text , source text,  title text, author TEXT, year INT,citedBy INT DEFAULT 0, refRet INT DEFAULT 0, citRet INT DEFAULT 0, citedByDate INT DEFAULT 0 )''')
         self.c.execute('''CREATE TABLE IF NOT EXISTS `edges` 
                           ( `FROM` text, `FSOURCE` text,  `TO`  text, `TSOURCE` text )''')
         self.db.commit()
 
-    def savePaper(self, res):
+    def savePaper(self, res, saveCitations = False):
         # check if paper exists already:
         self.c.execute('SELECT * FROM `paper` WHERE id=? AND source=?', (res['id'], res['source']))
         r = self.c.fetchone()
@@ -169,6 +166,14 @@ class epmcBuffer:
                 self.c.execute('INSERT INTO `paper` (id, source, title, author, year)\
                            VALUES (?, ?, ?, ?, ?)', (res['id'], res['source'], res['title'], res['authorString'], res['pubYear']))
                 self.db.commit()
+        
+        # in case the paper comes from a Citations request
+        # we can also save and update the citaion count from this data
+        if saveCitations:
+            self.c.execute("UPDATE `paper` SET citedBy=?, citedByDate=? WHERE id=? AND source=?", (res["citedByCount"], today,res["id"], res['source']))
+            self.db.commit()
+        
+        return()  
 
 
     def references(self, id, source = "MED", verbose = False):
@@ -194,7 +199,7 @@ class epmcBuffer:
             if possres['hitCount'] > 0:
                 for res in possres['resultList']['result']:
                     if 'id' in res.keys():
-                        self.savePaper(res)
+                        self.savePaper(res, saveCitations = True)
         
         # here make a call to the original class to query the server
         if fetchFromWeb:
@@ -244,16 +249,19 @@ class epmcBuffer:
             if possres['hitCount'] > 0:
                 for res in possres['resultList']['result']:
                     if 'id' in res.keys():
-                        self.savePaper(res)
+                        self.savePaper(res, saveCitations = True)
         
         # here make a call to the original class to query the server
         if fetchFromWeb:
             if self.verbose:
-                print("need to fetch ciatations of {} from web".format(id))
+                print("need to fetch citations of {} from web".format(id))
             res = self.epmc.citations(id, source)
 
             citedBy = res["hitCount"]
-            self.c.execute("UPDATE `paper` SET citRet=?,citedBy=? WHERE id=? AND source=?", (today, citedBy, id, source))
+            
+            if self.verbose:
+                print("fetched {}".format(citedBy))
+            self.c.execute("UPDATE `paper` SET citRet=?,citedByDate=?,citedBy=? WHERE id=? AND source=?", (today, today, citedBy, id, source))
             # save the result in the database if interesting:
             if res['hitCount'] > 0:
                 for reference in res['citationList']['citation']:
@@ -261,7 +269,7 @@ class epmcBuffer:
                     # update then the refRet field
                     if 'id' in reference.keys() and 'source' in reference.keys():
                         self.c.execute('INSERT INTO `edges` (`FROM`, `FSOURCE`,  `TO`,  `TSOURCE` )  VALUES (?, ?, ?,?)', (reference['id'], reference['source'], id, source ))
-                        self.savePaper(reference)
+                        self.savePaper(reference, saveCitations = True)
         self.db.commit()
 
         # fetch the data we want from the db
@@ -381,38 +389,57 @@ def main():
                 toVisit.append(p)
             edges.extend(newedges)
         i = i + 1
-        print(i)
+        print("At step {} of {}".format(i, args.count))
     print("Database done, will now update citation counts for all papers")
     e.updateCitationCount( items = list(set(toVisit)))
     # now that we have the data we can build a graph if we want
     g = Graph()
 
     nodes = e.nodes()
-
+    
     # for each node, we need to cound the number of related edges
     for key in nodes:
         nodes[key]["edges"] = 0
     
     for i in edges:
+        # count edges
         s = "{}_{}".format(i[0], i[1])
         t = "{}_{}".format(i[2], i[3])
-        nodes[s]["edges"] = nodes[s]["edges"] + 1
+        if s in nodes:
+            nodes[s]["edges"] = nodes[s]["edges"] + 1
+        if t in nodes:
+            nodes[t]["edges"] = nodes[t]["edges"] + 1
 
     # get all vertices
     for key in nodes:
         if nodes[key]["edges"] >= args.trim and nodes[key]["cited"] >= args.cited:
             g.add_vertex(key, label = nodes[key]["name"], size = nodes[key]["cited"],\
                     title = nodes[key]["title"])
+        else:
+            print(nodes[key], key)
     
     
     for i in edges:
         s = "{}_{}".format(i[0], i[1])
         t = "{}_{}".format(i[2], i[3])
+
+        
+        # Bug that some nodes (minimal number) do not appear
+        # this is a workaround
+        # remove this check if bug is fixed
+        if s not in nodes:
+            print("Missing node {}".format(s))
+            continue
+        if t not in nodes:
+            print("Missing node {}".format(s))
+            continue
+        # END 
         if nodes[s]["edges"] >= args.trim and nodes[t]["edges"] >= args.trim \
            and nodes[s]["cited"] >= args.cited and nodes[t]["cited"] >= args.cited:
             g.add_edge(s,t)
 
     g.simplify()
+
     if args.kmeans > 0:
         if args.verbose:
             print("dooing Kmeans clustering on titles")
