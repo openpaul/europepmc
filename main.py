@@ -46,7 +46,7 @@ def etAl(s, d = None):
 class epmc:
     def __init__(self):
         self.useragent = "epmc.py"
-        self.limit      = 200
+        self.limit      = 10
         
     def search(self, q):
         ''' search via the API'''
@@ -57,15 +57,36 @@ class epmc:
 
     def references(self, id, cl = "MED"):
         ''' fetch the references of the given publication'''
-        u = "https://www.ebi.ac.uk/europepmc/webservices/rest/{CL}/{ID}/references?page=1&pageSize={S}&format=json"
-        url = u.format(CL=cl, ID= id, S = self.limit )
-        res = requests.get(url = url)
-        return(res.json())
+        u = "https://www.ebi.ac.uk/europepmc/webservices/rest/{CL}/{ID}/references?pageSize={S}&format=json"
+        urlstring = u.format(CL=cl, ID= id, S = self.limit )
+        result = requests.get(url = urlstring).json()
+        
+        # if hit count > self.limit,we need a paged loop
+        if result["hitCount"] > self.limit:
+            page = 1
+            while len(result["referenceList"]["reference"]) < result["hitCount"]:
+                page = page + 1
+                newurl = "{}&page={}".format(urlstring, page)
+                tmpres = requests.get(url  = newurl).json()
+                result["referenceList"]["reference"].extend(tmpres["referenceList"]["reference"])
+        return(result)
+        
 
     def citations(self, id, cl = "MED"):
         '''fetch al pubilcations that cited this one'''
-        res = requests.get(url  = "https://www.ebi.ac.uk/europepmc/webservices/rest/{}/{}/citations?page=1&pageSize={}&format=json".format(cl, id, self.limit))
-        return(res.json())
+        urlstring = "https://www.ebi.ac.uk/europepmc/webservices/rest/{}/{}/citations?pageSize={}&format=json".format(cl, id, self.limit)
+        result = requests.get(url  = urlstring).json()
+        
+        # if hit count > self.limit,we need a paged loop
+        if result["hitCount"] > self.limit:
+            page = 1
+            while len(result["citationList"]["citation"]) < result["hitCount"]:
+                page = page + 1
+                newurl = "{}&page={}".format(urlstring, page)
+                tmpres = requests.get(url  = newurl).json()
+                result["citationList"]["citation"].extend(tmpres["citationList"]["citation"])
+                
+        return(result)
 
 class epmcBuffer:
     '''this class is to be used instead of th pure
@@ -353,7 +374,10 @@ def main():
                     print("fetching references now")
                 newedges = e.references(v[0], v[1])
             for edge in newedges:
-                p = (edge[2], edge[3])
+                if args.future:
+                    p = (edge[0], edge[1])
+                else:
+                    p = (edge[2], edge[3])
                 toVisit.append(p)
             edges.extend(newedges)
         i = i + 1
@@ -390,8 +414,12 @@ def main():
 
     g.simplify()
     if args.kmeans > 0:
+        if args.verbose:
+            print("dooing Kmeans clustering on titles")
         g = clusterByTitle(g, args.kmeans)
-    summary(g)
+        
+    if args.verbose:
+        summary(g)
 
 
     g.save(args.output + ".graphml", format="graphml")
