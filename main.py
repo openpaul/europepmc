@@ -8,6 +8,7 @@ from urllib.parse import urlencode, quote_plus
 import pprint
 import codecs
 import itertools
+import math
 from igraph import *
 import sqlite3
 from time import sleep
@@ -44,8 +45,10 @@ def etAl(s, d = None):
     return(n)
 
 class epmc:
-    def __init__(self):
-        self.useragent = "epmc.py"
+    def __init__(self, verbose = False, debug = False):
+        self.useragent  = "epmc.py"
+        self.debug      = debug
+        self.verbose    = verbose
         self.limit      = 999 # 1000 is the API limit, we set it one lower just in case
         
     def search(self, q):
@@ -64,7 +67,10 @@ class epmc:
         # if hit count > self.limit,we need a paged loop
         if result["hitCount"] > self.limit:
             page = 1
-            while len(result["referenceList"]["reference"]) < result["hitCount"]:
+            maxpages = math.ceil(result["hitCount"]/self.limit)
+            while len(result["referenceList"]["reference"]) < result["hitCount"] or page <= maxpages:
+                if self.debug:
+                    print("on page", page)
                 page = page + 1
                 newurl = "{}&page={}".format(urlstring, page)
                 tmpres = requests.get(url  = newurl).json()
@@ -80,8 +86,11 @@ class epmc:
         # if hit count > self.limit,we need a paged loop
         if result["hitCount"] > self.limit:
             page = 1
-            while len(result["citationList"]["citation"]) < result["hitCount"]:
+            maxpages = math.ceil(result["hitCount"]/self.limit)
+            while len(result["citationList"]["citation"]) < result["hitCount"] or page <= maxpages:
                 page = page + 1
+                if self.debug:
+                    print("on page {} of {}".format(page, maxpages))
                 newurl = "{}&page={}".format(urlstring, page)
                 tmpres = requests.get(url  = newurl).json()
                 result["citationList"]["citation"].extend(tmpres["citationList"]["citation"])
@@ -93,11 +102,12 @@ class epmcBuffer:
     epmc class. Here request performed previsously
     will be cached in a database and only be requested again 
     if a certain, user defined, number of days has passed'''
-    def __init__(self,dbname = ".epmc.db", verbose = False):
-        self.epmc = epmc()
+    def __init__(self,dbname = ".epmc.db", verbose = False, debug = False):
+        self.epmc = epmc(verbose = verbose, debug = debug)
         self.daylimit = 5 # number of days we trust the number of citations did not change
         self.reflimit = 60 # number of days we trust the number of references did not change
         self.verbose = verbose
+        self.debug   = debug
         self.DB(dbname)
     
     def DB(self, dbname = ".epmc.db"):
@@ -128,7 +138,10 @@ class epmcBuffer:
         print("Checking citations of {} papers".format(len(resF)))
         i = 0
         j = 0
+        
         for r in resF:
+            if self.debug:
+                print(r)
             if today - r[2] > (60*60* 24 * self.daylimit):
                 # fetch new from the interweb:
                 cits = self.citations(r[0], r[1])
@@ -147,7 +160,7 @@ class epmcBuffer:
             j = j + 1
         self.db.commit()
 
-
+  
     def createTable(self):
         # a single table to hold the information
  
@@ -155,6 +168,11 @@ class epmcBuffer:
                           (id text , source text,  title text, author TEXT, year INT,citedBy INT DEFAULT 0, refRet INT DEFAULT 0, citRet INT DEFAULT 0, citedByDate INT DEFAULT 0 )''')
         self.c.execute('''CREATE TABLE IF NOT EXISTS `edges` 
                           ( `FROM` text, `FSOURCE` text,  `TO`  text, `TSOURCE` text )''')
+        
+        # create indices as this speed things up quite a lot           
+        index1 = ("CREATE INDEX IF NOT EXISTS paper_idx ON paper (id,source);")
+        self.c.execute(index1)
+
         self.db.commit()
 
     def savePaper(self, res, saveCitations = False):
@@ -165,13 +183,13 @@ class epmcBuffer:
             if set(['id','source','title','authorString','pubYear']).issubset(res.keys()):
                 self.c.execute('INSERT INTO `paper` (id, source, title, author, year)\
                            VALUES (?, ?, ?, ?, ?)', (res['id'], res['source'], res['title'], res['authorString'], res['pubYear']))
-                self.db.commit()
+                #self.db.commit()
         
         # in case the paper comes from a Citations request
         # we can also save and update the citaion count from this data
         if saveCitations:
             self.c.execute("UPDATE `paper` SET citedBy=?, citedByDate=? WHERE id=? AND source=?", (res["citedByCount"], today,res["id"], res['source']))
-            self.db.commit()
+            #self.db.commit()
         
         return()  
 
@@ -260,11 +278,17 @@ class epmcBuffer:
             citedBy = res["hitCount"]
             
             if self.verbose:
-                print("fetched {}".format(citedBy))
+                print("fetched {} citations".format(citedBy))
+                
             self.c.execute("UPDATE `paper` SET citRet=?,citedByDate=?,citedBy=? WHERE id=? AND source=?", (today, today, citedBy, id, source))
+            
+            if self.verbose:
+                print("Saving edges to these papers and the paper in database")
             # save the result in the database if interesting:
             if res['hitCount'] > 0:
                 for reference in res['citationList']['citation']:
+                    if self.debug:
+                        print("debug: saving ref", reference) 
                     # save metadata of this it if not already
                     # update then the refRet field
                     if 'id' in reference.keys() and 'source' in reference.keys():
@@ -360,10 +384,12 @@ def main():
             help = "K for means clustering, 0 for deactivating", default = 10)
     parser.add_argument("-v", "--verbose", type = bool, 
                             help="increase output verbosity", default = False)
+    parser.add_argument("-D", "--debug", type = bool, 
+                            help="increase output verbosity", default = False)
     args = parser.parse_args()
 
     # start a new DB server
-    e = epmcBuffer(dbname = args.db, verbose = args.verbose)
+    e = epmcBuffer(dbname = args.db, verbose = args.verbose, debug = args.debug)
     # now make hops:
     i = 0
     toVisit = [(args.id, args.source)]
@@ -415,8 +441,8 @@ def main():
         if nodes[key]["edges"] >= args.trim and nodes[key]["cited"] >= args.cited:
             g.add_vertex(key, label = nodes[key]["name"], size = nodes[key]["cited"],\
                     title = nodes[key]["title"])
-        else:
-            print(nodes[key], key)
+        #else:
+        #    print(nodes[key], key)
     
     
     for i in edges:
