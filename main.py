@@ -16,6 +16,9 @@ import os, pickle
 import sys
 import time
 
+from collections import OrderedDict
+
+
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 from sklearn.metrics import adjusted_rand_score
@@ -310,7 +313,7 @@ class epmcBuffer:
         n = {}
         for r in res:
             n["{}_{}".format(r[0],r[1])] = {"name": etAl(r[3],r[4]), "cited": r[2],\
-                                            "title": r[5]}
+                                            "title": r[5], "year" :  r[4], "edges" : 0}
 
         return(n)
 
@@ -324,6 +327,7 @@ def get_N_HexCol(N=5):
         rgb = map(lambda x: int(x * 255), colorsys.hsv_to_rgb(*rgb))
         hex_out.append('#%02x%02x%02x' % tuple(rgb))
     return hex_out
+
 
 # from https://pythonprogramminglanguage.com/kmeans-elbow-method/
 def clusterByTitle(g, k = 5):
@@ -356,6 +360,83 @@ def clusterByTitle(g, k = 5):
 
     return(g)
 
+
+class node():
+    def __init__(self, name , **kwargs):
+        self.name = name
+        self.attr = OrderedDict()
+        for key in kwargs:
+            self.attr[key] = kwargs[key]
+
+            
+class edge():
+    def __init__(self, source, target):
+        self.source = source
+        self.target = target    
+
+class graphml():
+    def __init__(self):
+        ''' class that handles a simple graph but as no
+        sanity checks. so what comes in is what goes out'''
+        self.nodes = []
+        self.edges = []
+        
+    def addNode(self, name, **kwargs):
+        self.nodes.append(node(name, **kwargs))
+    
+    def addEdge(self, source, target):
+        self.edges.append(edge(source, target))
+        
+    def writeGML(self, filepath):
+        '''not working with gephi :('''
+        with open(filepath, "w") as f:
+            f.write("graph\n[\ncomment \"This is a sample graph\"\ndirected 1\n")
+            for node in self.nodes:
+                f.write("node\n[\nid {}\n".format(node.name))
+                for key in node.attr:
+                    f.write("{} {}\n".format(key, node.attr[key]))
+                f.write("]\n")
+            for edge in self.edges:
+                f.write("edge\n[\nsource {}\ntarget {}\n]\n".format(edge.source, edge.target))
+            f.write("]\n")
+        return
+    def write(self, filepath):
+        nodedef = False # write node and edge definition once
+        edgedef = False
+        with open(filepath, "w") as f:
+            
+            for node in self.nodes:
+                if nodedef == False:
+                    nd = "nodedef>name VARCHAR"
+                    for key in node.attr:  
+                        # convert type into gdf definitions
+                        tp = "BOOLEAN"
+                        if isinstance(node.attr[key],str):
+                            tp = "VARCHAR"
+                        elif isinstance(node.attr[key], int):
+                            tp = "INTEGER"
+                        elif isinstance(node.attr[key],float):
+                            tp = "DOUBLE"
+                        nd = "{}, {} {}".format(nd, key, tp)
+
+                    nd += "\n"
+                    f.write(nd)
+                    nodedef = True
+                f.write(node.name)
+                for key in node.attr:
+                    if isinstance(node.attr[key],str):
+                        f.write(", \"{}\"".format(node.attr[key].replace(",","")))             
+                    else:
+                        f.write(", {}".format(node.attr[key]))
+                f.write("\n")
+                
+            for edge in self.edges:
+                if edgedef == False:
+                    ed = "edgedef>node1 VARCHAR, node2 VARCHAR\n"
+                    edgedef = True
+                    f.write(ed)
+                f.write("{}, {}\n".format(edge.source, edge.target))
+        return
 
 def main():
     parser = argparse.ArgumentParser()
@@ -407,6 +488,7 @@ def main():
                 if args.verbose:
                     print("fetching references now")
                 newedges = e.references(v[0], v[1])
+
             for edge in newedges:
                 if args.future:
                     p = (edge[0], edge[1])
@@ -417,15 +499,17 @@ def main():
         i = i + 1
         print("At step {} of {}".format(i, args.count))
     print("Database done, will now update citation counts for all papers")
-    e.updateCitationCount( items = list(set(toVisit)))
+    #e.updateCitationCount( items = list(set(toVisit)))
     # now that we have the data we can build a graph if we want
     g = Graph()
+    G = graphml()
+    
 
     nodes = e.nodes()
     
     # for each node, we need to cound the number of related edges
-    for key in nodes:
-        nodes[key]["edges"] = 0
+    #for key in nodes:
+    #    nodes[key]["edges"] = 0
     
     for i in edges:
         # count edges
@@ -437,10 +521,18 @@ def main():
             nodes[t]["edges"] = nodes[t]["edges"] + 1
 
     # get all vertices
+    keyAskedFor = "{}_{}".format(args.id, args.source) # this was the paper asked for. always show that
+
     for key in nodes:
-        if nodes[key]["edges"] >= args.trim and nodes[key]["cited"] >= args.cited:
+        if key == keyAskedFor or (nodes[key]["edges"] >= args.trim and nodes[key]["cited"] >= args.cited):
             g.add_vertex(key, label = nodes[key]["name"], size = nodes[key]["cited"],\
-                    title = nodes[key]["title"])
+                    title = nodes[key]["title"], citations = nodes[key]["cited"], \
+                    year = nodes[key]["year"])
+            G.addNode(key, label = nodes[key]["name"], size = nodes[key]["cited"],\
+                    title = nodes[key]["title"], citations = nodes[key]["cited"], \
+                    year = nodes[key]["year"]) # my own graph class
+            if args.debug:
+                print(key,nodes[key])
         #else:
         #    print(nodes[key], key)
     
@@ -448,7 +540,8 @@ def main():
     for i in edges:
         s = "{}_{}".format(i[0], i[1])
         t = "{}_{}".format(i[2], i[3])
-
+        if args.debug:
+            print("adding edge {} {}".format(s,t))
         
         # Bug that some nodes (minimal number) do not appear
         # this is a workaround
@@ -460,10 +553,11 @@ def main():
             print("Missing node {}".format(s))
             continue
         # END 
-        if nodes[s]["edges"] >= args.trim and nodes[t]["edges"] >= args.trim \
-           and nodes[s]["cited"] >= args.cited and nodes[t]["cited"] >= args.cited:
-            g.add_edge(s,t)
-
+        if (nodes[s]["edges"] >= args.trim or s == keyAskedFor ) and (nodes[t]["edges"] >= args.trim or t == keyAskedFor ) \
+        and (nodes[s]["cited"] >= args.cited or s == keyAskedFor) and (nodes[t]["cited"] >= args.cited or t == keyAskedFor):
+            g.add_edge(s,t, S = s, dfg = t)
+            G.addEdge(s,t) # my own graph class
+            
     g.simplify()
 
     if args.kmeans > 0:
@@ -473,9 +567,13 @@ def main():
         
     if args.verbose:
         summary(g)
-
-
+    # cloding file connection
+    
+    G.write(args.output + ".gdf")
+    
     g.save(args.output + ".graphml", format="graphml")
+    
+    
 
     print(args.trim)
 
