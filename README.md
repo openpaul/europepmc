@@ -15,6 +15,16 @@ git clone THIS repro
 python3 main.py -h
 ```
 
+You'll need to input an id of the paper. So if you found the paper you like on the 
+mentioned webpage you can extract the info you need from the URI:
+
+```
+#https://europepmc.org/abstract/PMC/PMC6132391
+python3 main.py PMC6132391 PMC
+```
+
+
+
 ### Options explained
 Most options are self explanatory but some options are woth explaining:
 
