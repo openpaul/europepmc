@@ -499,7 +499,7 @@ def main():
         i = i + 1
         print("At step {} of {}".format(i, args.count))
     print("Database done, will now update citation counts for all papers")
-    #e.updateCitationCount( items = list(set(toVisit)))
+    e.updateCitationCount( items = list(set(toVisit)))
     # now that we have the data we can build a graph if we want
     g = Graph()
     G = graphml()
