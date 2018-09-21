@@ -3,7 +3,7 @@
 This script is a simple API client for the europepmc.org database.
 It takes an ID of an paper of interest (POI) and creates either a citation or a reference graph in both the graphml and gdf format.
 
-Both formats can be visualized using gephi, but only file with the gdf format can be merged into the same workspace due to an ID problem.
+Both formats can be visualized using gephi[https://gephi.org/], but only file with the gdf format can be merged into the same workspace due to an ID problem.
 
 This might be helpful for people dooing literature research.
 
