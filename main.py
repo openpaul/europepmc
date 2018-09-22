@@ -425,7 +425,7 @@ class graphml():
                 f.write(node.name)
                 for key in node.attr:
                     if isinstance(node.attr[key],str):
-                        f.write(", \"{}\"".format(node.attr[key].replace(",","")))             
+                        f.write(", {}".format(node.attr[key].replace(",","")))             
                     else:
                         f.write(", {}".format(node.attr[key]))
                 f.write("\n")
