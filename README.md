@@ -41,7 +41,7 @@ python3 main.py 17166259 MED example/example_future -f 1 # the one can be any va
 
 The load both files into gephi and color them differently to create a graph like this one:
 
-![An example graph showing a result produced by using this scripts output in gephi](example/example.png?raw=true)
+![An example graph showing a result produced by using this scripts output in gephi](examples/example.png?raw=true)
 
 
 
