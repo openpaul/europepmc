@@ -1,11 +1,12 @@
 # Simple europepmc.org graph 
 
-This script is a simple API client for the europepmc.org database.
+This script is a simple API client for the europepmc database ([europepmc.org](europepmc.org)).
 It takes an ID of an paper of interest (POI) and creates either a citation or a reference graph in both the graphml and gdf format.
 
-Both formats can be visualized using gephi[https://gephi.org/], but only files with the gdf format can be merged into the same workspace due to an ID problem.
-
 This might be helpful for people dooing literature research.
+
+## The two output files
+Both formats can be visualized using gephi ([gephi.org](https://gephi.org/)), but only files in the gdf format can be merged into the same workspace due to an ID problem (The IDs in the graphml format are created by iGraph and thus they do not relate to the papers id, resulting in wrong merges using gephi).
 
 Attentions: The graphml format is written by igraph and the gdf format is written by a custom 
 function written by me. So the graphml format should always be used, only if you want to load 
@@ -15,17 +16,34 @@ multiple graphs use the gdf.
 ## Run it
 
 ```
-git clone THIS repro
+git clone https://github.com/openpaul/europepmc
 python3 main.py -h
 ```
 
 You'll need to input an id of the paper. So if you found the paper you like on the 
-mentioned webpage you can extract the info you need from the URI:
+webpage ([europepmc.org](europepmc.org)) you can extract the info you need from the URI:
 
 ```
 #https://europepmc.org/abstract/PMC/PMC6132391
-python3 main.py PMC6132391 PMC
+cd europepmc
+python3 main.py PMC6132391 PMC myfancygraphfile
 ```
+
+### Example
+If for example you are interested to see where a finding comes from and how it influenzed other research you could run the following steps. Here we look at the BLAST paper (https://europepmc.org/abstract/MED/2231712)
+
+```
+# look in the history of a paper
+python3 main.py 2231712 MED BLAST_example 
+# look into the researched fostered by the paper
+python3 main.py 2231712 MED BLAST_example_future -f 1 # the one can be any value, this is a bug and should be addressed
+```
+
+Running the second command will take quite some time, as BLAST was cited several thousand times and all of these papers will be looked at.
+
+The load both files into gephi and color them differently to create a graph like this one:
+
+![An example graph showing a result produced by using this scripts output in gephi](example/example.png?raw=true)
 
 
 
