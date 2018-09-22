@@ -3,7 +3,7 @@
 This script is a simple API client for the europepmc database ([europepmc.org](europepmc.org)).
 It takes an ID of an paper of interest (POI) and creates either a citation or a reference graph in both the graphml and gdf format.
 
-This might be helpful for people dooing literature research.
+This might be helpful for people doing literature research.
 
 ## The two output files
 Both formats can be visualized using gephi ([gephi.org](https://gephi.org/)), but only files in the gdf format can be merged into the same workspace due to an ID problem (The IDs in the graphml format are created by iGraph and thus they do not relate to the papers id, resulting in wrong merges using gephi).
@@ -64,7 +64,7 @@ Obviously there might be bugs in the script and features missing. For example it
 papers based on the expected citations due to age. So show new papers with few citations but only old ones
 that have quite some. 
 
-So if you feel like fixing some bugs or improving speed or even just the style, pleas 
+So if you feel like fixing some bugs or improving speed or even just the style, please 
 do not be afraid of doing some pull requests. I'll probably approve. 
 
 Or just fork it and do as you please.
