@@ -1,0 +1,383 @@
+nodedef>name VARCHAR, label VARCHAR, size INTEGER, title VARCHAR, citations INTEGER, year INTEGER
+16163345_MED, Arrigo (2005), 234, Marine microorganisms and global nutrient cycles., 234, 2005
+9618454_MED, Whitman et al. (1998), 1203, Prokaryotes: the unseen majority., 1203, 1998
+11206545_MED, Karner et al. (2001), 458, Archaeal dominance in the mesopelagic zone of the Pacific Ocean., 458, 2001
+12384570_MED, Breitbart et al. (2002), 383, Genomic analysis of uncultured marine viral communities., 383, 2002
+11121760_MED, Hendrix et al. (2000), 190, The origins and ongoing evolution of viruses., 190, 2000
+11792317_MED, Brussow and Hendrix (2002), 197, Phage genomics: small is beautiful., 197, 2002
+11976141_MED, Chen and Lu (2002), 90, Genomic sequence and evolution of marine cyanophage P60: a new insight on lytic and lysogenic phages., 90, 2002
+16349372_MED, Suttle and Chan (1994), 122, Dynamics and Distribution of Cyanophages and Their Effect on Marine Synechococcus spp., 122, 1994
+16349072_MED, Waterbury and Valois (1993), 176, Resistance to co-occurring phages enables marine synechococcus communities to coexist with cyanophages abundant in seawater., 176, 1993
+10051617_MED, Hendrix et al. (1999), 433, Evolutionary relationships among diverse bacteriophages and prophages: all the world's a phage., 433, 1999
+10704475_MED, Wommack and Colwell (2000), 643, Virioplankton: viruses in aquatic ecosystems., 643, 2000
+10376593_MED, Fuhrman (1999), 625, Marine viruses and their biogeochemical and ecological effects., 625, 1999
+9872784_MED, Wommack et al. (1999), 83, Population dynamics of chesapeake bay virioplankton: total-community analysis by pulsed-field gel electrophoresis, 83, 1999
+8658163_MED, Waldor and Mekalanos (1996), 774, Lysogenic conversion by a filamentous phage encoding cholera toxin., 774, 1996
+9687430_MED, Jiang and Paul (1998), 95, Gene transfer by transduction in the marine environment., 95, 1998
+14370199_MED, SPENCER (1955), 24, A marine bacteriophage., 24, 1955
+17166259_MED, Brockhurst et al. (2006), 18, The impact of phages on interspecific competition in experimental populations of bacteria., 18, 2006
+15109783_MED, Weinbauer (2004), 496, Ecology of prokaryotic viruses., 496, 2004
+12514006_MED, Ashelford et al. (2003), 81, Elevated abundance of bacteriophage infecting bacteria in soil., 81, 2003
+11010859_MED, Ashelford et al. (2000), 32, Seasonal population dynamics and interactions of competing bacteriophages and their host in the rhizosphere., 32, 2000
+9145395_MED, Proctor (1997), 26, Advances in the study of marine viruses., 26, 1997
+14686936_MED, Weinbauer and Rassoulzadegan (2004), 212, Are viruses driving microbial diversification and diversity?, 212, 2004
+12470812_MED, Paul et al. (2002), 38, Marine phage genomics., 38, 2002
+12169615_MED, Lawrence et al. (2002), 131, Imbroglios of viral taxonomy: genetic exchange and failings of phenetic approaches., 131, 2002
+11597449_MED, Ohnishi et al. (2001), 125, Diversification of Escherichia coli genomes: are bacteriophages the major contributors?, 125, 2001
+11916671_MED, Zhong et al. (2002), 73, Phylogenetic diversity of marine cyanophage isolates and natural virus communities as revealed by sequences of viral capsid assembly protein gene g20., 73, 2002
+12142423_MED, Rohwer and Edwards (2002), 239, The Phage Proteomic Tree: a genome-based taxonomy for phage., 239, 2002
+16151111_MED, Harcombe and Bull (2005), 19, Impact of phages on two-species bacterial communities., 19, 2005
+9925618_MED, van et al. (1999), 108, Changes in bacterial and eukaryotic community structure after mass lysis of filamentous cyanobacteria associated with viruses., 108, 1999
+9872785_MED, Wommack et al. (1999), 41, Hybridization analysis of chesapeake bay virioplankton, 41, 1999
+9603813_MED, Fuller et al. (1998), 70, Occurrence of a sequence in marine cyanophages similar to that of T4 g20 and its application to PCR-based detection and quantification techniques., 70, 1998
+9097450_MED, Furuta et al. (1997), 31, Chlorella virus PBCV-1 encodes a homolog of the bacteriophage T4 UV damage repair gene denV., 31, 1997
+16535146_MED, Hennes et al. (1995), 54, Fluorescently Labeled Virus Probes Show that Natural Virus Populations Can Control the Structure of Marine Microbial Communities., 54, 1995
+16534914_MED, Hennes and Simon (1995), 49, Significance of bacteriophages for controlling bacterioplankton growth in a mesotrophic lake., 49, 1995
+10888648_MED, Villarreal and DeFilippis (2000), 86, A hypothesis for DNA viruses as the origin of eukaryotic replication proteins., 86, 2000
+12466840_MED, Buckling and Rainey (2002), 138, The role of parasites in sympatric and allopatric host diversification., 138, 2002
+11140680_MED, Buckling et al. (2000), 93, Disturbance and diversity in experimental microcosms., 93, 2000
+16535459_MED, Weinbauer and Suttle (1996), 55, Potential significance of lysogeny to bacteriophage production and bacterial mortality in coastal waters of the gulf of Mexico., 55, 1996
+21236150_MED, Thingstad et al. (1993), 19, Are viruses important partners in pelagic fend webs?, 19, 1993
+1444409_MED, Wommack et al. (1992), 70, Distribution of viruses in the Chesapeake Bay., 70, 1992
+9464396_MED, Jensen et al. (1998), 100, Prevalence of broad-host-range lytic bacteriophages of Sphaerotilus natans Escherichia coli and Pseudomonas aeruginosa., 100, 1998
+9476352_MED, Schrader et al. (1997), 23, Bacteriophage infection and multiplication occur in Pseudomonas aeruginosa starved for 5 years., 23, 1997
+16348190_MED, Bratbak et al. (1990), 74, Viruses as partners in spring bloom microbial trophodynamics., 74, 1990
+9451814_MED, von et al. (1997), 925, Determination of microbial diversity in environmental samples: pitfalls of PCR-based rRNA analysis., 925, 1997
+16121181_MED, Bell et al. (2005), 291, The contribution of species richness and composition to bacterial services., 291, 2005
+16313450_MED, MacLean (2005), 55, Adaptive radiation in microbial microcosms., 55, 2005
+11872479_MED, Short and Suttle (2002), 64, Sequence analysis of marine virus communities reveals that groups of related algal viruses are widely distributed in nature., 64, 2002
+9852508_MED, Garza and Suttle (1998), 38, The Effect of Cyanophages on the Mortality of Synechococcus spp. and Selection for UV Resistant Viral Communities., 38, 1998
+2755508_MED, Bergh et al. (1989), 471, High abundance of viruses found in aquatic environments., 471, 1989
+8639330_MED, Zillig et al. (1996), 75, Viruses plasmids and other genetic elements of thermophilic and hyperthermophilic Archaea., 75, 1996
+11229937_MED, Danovaro et al. (2001), 70, Determination of virus abundance in marine sediments., 70, 2001
+9797256_MED, Wichels et al. (1998), 71, Bacteriophage diversity in the North Sea., 71, 1998
+16349497_MED, Weinbauer and Höfle (1998), 60, Significance of viral lysis and flagellate grazing as factors controlling bacterioplankton production in a eutrophic lake., 60, 1998
+9172337_MED, Tuomi et al. (1997), 23, Bacterial population dynamics in a meromictic lake., 23, 1997
+IND20440221_AGR, Marsh and Wellington (1994), 29, Phage-host interactions in soil., 29, 1994
+16348556_MED, Hara et al. (1991), 57, Abundance of viruses in marine waters: assessment by epifluorescence and transmission electron microscopy., 57, 1991
+7831817_MED, Olsthoorn et al. (1995), 26, Nucleotide sequence of a single-stranded RNA phage from Pseudomonas aeruginosa: kinship to coliphages and conservation of regulatory RNA structures., 26, 1995
+3904603_MED, Staley and Konopka (1985), 384, Measurement of in situ activities of nonphotosynthetic microorganisms in aquatic and terrestrial habitats., 384, 1985
+16345577_MED, Fuhrman and Azam (1980), 109, Bacterioplankton secondary production estimates for coastal waters of british columbia antarctica and california., 109, 1980
+9758799_MED, Weinbauer and Hofle (1998), 22, Distribution and life strategies of two bacterial populations in a eutrophic lake, 22, 1998
+16346845_MED, Ward and Carlucci (1985), 37, Marine ammonia- and nitrite-oxidizing bacteria: serological diversity determined by immunofluorescence in culture and in the environment., 37, 1985
+16345920_MED, Dahle and Laake (1982), 15, Diversity dynamics of marine bacteria studied by immunofluorescent staining on membrane filters., 15, 1982
+6484871_MED, Stewart and Levin (1984), 73, The population biology of bacterial viruses: why be temperate., 73, 1984
+12028776_MED, Buckling and Rainey (2002), 148, Antagonistic coevolution between a bacterium and a bacteriophage., 148, 2002
+10761916_MED, Harms et al. (2000), 330, Pervasive density-dependent recruitment enhances seedling diversity in a tropical forest., 330, 2000
+16643302_MED, Bell et al. (2006), 127, Plant pathogens drive density-dependent seedling mortality in a tropical tree., 127, 2006
+16701347_MED, Crawford et al. (2004), 37, Towards an evolutionary ecology of life in soil., 37, 2004
+12004116_MED, Torsvik et al. (2002), 376, Prokaryotic diversity--magnitude dynamics and controlling factors., 376, 2002
+12024264_MED, Middelboe et al. (2001), 55, Effects of Bacteriophages on the Population Dynamics of Four Strains of Pelagic Marine Bacteria., 55, 2001
+7162524_MED, Tilman (1982), 26, Resource competition and community structure., 26, 1982
+16519233_MED, Buckling et al. (2006), 30, Antagonistic coevolution with parasites increases the cost of host deleterious mutations., 30, 2006
+16599913_MED, Brockhurst et al. (2006), 41, Spatial heterogeneity and the stability of host-parasite coexistence., 41, 2006
+16006335_MED, Brockhurst et al. (2005), 44, The effect of a bacteriophage on diversification of the opportunistic bacterial pathogen Pseudomonas aeruginosa., 44, 2005
+16796568_MED, Snyder et al. (2006), 106, Predator biodiversity strengthens herbivore suppression., 106, 2006
+15002778_MED, Brockhurst et al. (2004), 34, The effect of spatial heterogeneity and parasites on the evolution of host diversity., 34, 2004
+9665128_MED, Rainey and Travisano (1998), 506, Adaptive radiation in a heterogeneous environment., 506, 1998
+929457_MED, Holt (1977), 528, Predation apparent competition and the structure of prey communities., 528, 1977
+12028775_MED, Vamosi and Schluter (2002), 14, Impacts of trout predation on fitness of sympatric sticklebacks and their hybrids., 14, 2002
+3301527_MED, Helling et al. (1987), 129, Evolution of Escherichia coli during growth in a constant environment., 129, 1987
+17730400_MED, Schluter (1994), 170, Experimental evidence that competition promotes divergence in adaptive radiation., 170, 1994
+8830243_MED, Rainey and Bailey (1996), 117, Physical and genetic map of the Pseudomonas fluorescens SBW25 chromosome., 117, 1996
+4215366_MED, Barksdale and Arden (1974), 97, Persisting bacteriophage infections lysogeny and phage conversions., 97, 1974
+1094307_MED, Edlin et al. (1975), 49, Lambda lysogens of E. coli reproduce more rapidly than non-lysogens., 49, 1975
+319255_MED, Lin et al. (1977), 38, Increased reproductive fitness of Escherichia coli lambda lysogens., 38, 1977
+15040264_MED, Levin and Bull (2004), 145, Population and evolutionary dynamics of phage therapy., 145, 2004
+10381871_MED, Doolittle (1999), 685, Phylogenetic classification and the universal tree., 685, 1999
+10941783_MED, Paul (1999), 34, Microbial gene transfer: an ecological perspective., 34, 1999
+8622911_MED, Merril et al. (1996), 174, Long-circulating bacteriophage as antibacterial agents., 174, 1996
+2185476_MED, Hamilton et al. (1990), 430, Sexual reproduction as an adaptation to resist parasites (a review)., 430, 1990
+6748694_MED, Lenski (1984), 35, Coevolution of bacteria and phage: are there endless cycles of bacterial defenses and phage counterdefenses?, 35, 1984
+8019688_MED, Ripp et al. (1994), 17, Transduction of a freshwater microbial community by a new Pseudomonas aeruginosa generalized transducing phage UT1., 17, 1994
+8709840_MED, Cheetham and Katz (1995), 144, A role for bacteriophages in the evolution and transfer of bacterial virulence determinants., 144, 1995
+19873108_MED, Ellis and Delbruck (1939), 176, THE GROWTH OF BACTERIOPHAGE., 176, 1939
+8634015_MED, Ackermann (1996), 28, Frequency of morphological phage descriptions in 1995., 28, 1996
+11872504_MED, Danovaro et al. (2002), 45, Higher abundance of bacteria than of viruses in deep Mediterranean sediments., 45, 2002
+10788350_MED, Danovaro and Serresi (2000), 39, Viral density and virus-to-bacterium ratio in deep-sea sediments of the Eastern Mediterranean., 39, 2000
+8090765_MED, Korona et al. (1994), 73, Evidence for multiple adaptive peaks from populations of bacteria evolving in a structured habitat., 73, 1994
+1622283_MED, Ogunseitan et al. (1992), 16, Application of DNA probes to analysis of bacteriophage distribution patterns in the environment., 16, 1992
+8586275_MED, Inoue et al. (1995), 22, Cloning and sequence analysis of Vibrio parahaemolyticus ompK gene encoding a 26-kDa outer membrane protein OmpK that serves as receptor for a broad-host-range vibriophage KVP40., 22, 1995
+7867914_MED, Inoue et al. (1995), 22, A 26-kDa outer membrane protein OmpK common to Vibrio species is the receptor for a broad-host-range vibriophage KVP40., 22, 1995
+16534986_MED, Ripp and Miller (1995), 15, Effects of Suspended Particulates on the Frequency of Transduction among Pseudomonas aeruginosa in a Freshwater Environment., 15, 1995
+28312801_MED, Gilbert et al. (1994), 46, Density and distance-to-adult effects of a canker disease of trees in a moist tropical forest., 46, 1994
+7747950_MED, Chen and Suttle (1995), 50, Amplification of DNA polymerase gene fragments from viruses infecting microalgae., 50, 1995
+9599142_MED, Pennisi (1998), 46, Genome data shake tree of life., 46, 1998
+11543124_MED, Kepner et al. (1998), 29, Viruses in Antarctic lakes., 29, 1998
+24189813_MED, Proctor et al. (1993), 34, Calibrating estimates of phage-induced mortality in marine bacteria: Ultrastructural studies of marine bacteriophage development from one-step growth experiments., 34, 1993
+8623526_MED, Chen and Suttle (1996), 61, Evolutionary relationships among large double-stranded DNA viruses that infect microalgae and other organisms as inferred from DNA polymerase genes., 61, 1996
+9680320_MED, Oren et al. (1997), 64, Occurrence of virus-like particles in the Dead Sea., 64, 1997
+11679667_MED, Tilman et al. (2001), 437, Diversity and productivity in a long-term grassland experiment., 437, 2001
+11807553_MED, Cardinale et al. (2002), 170, Species diversity enhances ecosystem functioning through interspecific facilitation., 170, 2002
+778586_MED, Hofnung et al. (1976), 65, lamB mutations in E. coli K12: growth of lambda host range mutants and effect of nonsense suppressors., 65, 1976
+10457617_MED, Wills and Condit (1999), 21, Similar non-random processes maintain diversity in two tropical rainforests., 21, 1999
+11038601_MED, Wills et al. (1997), 79, Strong density- and diversity-related effects help to maintain tree species diversity in a neotropical forest., 79, 1997
+edgedef>node1 VARCHAR, node2 VARCHAR
+17166259_MED, 2755508_MED
+17166259_MED, 14686936_MED
+17166259_MED, 15109783_MED
+17166259_MED, 16006335_MED
+17166259_MED, 10704475_MED
+17166259_MED, 16163345_MED
+17166259_MED, 12514006_MED
+17166259_MED, 16151111_MED
+17166259_MED, 12466840_MED
+17166259_MED, 16121181_MED
+17166259_MED, 16313450_MED
+17166259_MED, 9758799_MED
+17166259_MED, 12028776_MED
+17166259_MED, 10761916_MED
+17166259_MED, 16643302_MED
+17166259_MED, 16701347_MED
+17166259_MED, 12004116_MED
+17166259_MED, 12024264_MED
+17166259_MED, 7162524_MED
+17166259_MED, 16519233_MED
+17166259_MED, 16599913_MED
+17166259_MED, 16796568_MED
+17166259_MED, 15002778_MED
+17166259_MED, 9665128_MED
+17166259_MED, 2755508_MED
+17166259_MED, 14686936_MED
+17166259_MED, 15109783_MED
+17166259_MED, 16006335_MED
+17166259_MED, 10704475_MED
+17166259_MED, 16163345_MED
+17166259_MED, 12514006_MED
+17166259_MED, 16151111_MED
+17166259_MED, 12466840_MED
+17166259_MED, 16121181_MED
+17166259_MED, 16313450_MED
+17166259_MED, 9758799_MED
+17166259_MED, 12028776_MED
+17166259_MED, 10761916_MED
+17166259_MED, 16643302_MED
+17166259_MED, 16701347_MED
+17166259_MED, 12004116_MED
+17166259_MED, 12024264_MED
+17166259_MED, 7162524_MED
+17166259_MED, 16519233_MED
+17166259_MED, 16599913_MED
+17166259_MED, 16796568_MED
+17166259_MED, 15002778_MED
+17166259_MED, 9665128_MED
+14686936_MED, 2755508_MED
+14686936_MED, 12384570_MED
+14686936_MED, 11792317_MED
+14686936_MED, 11976141_MED
+14686936_MED, 10381871_MED
+14686936_MED, 1094307_MED
+14686936_MED, 10376593_MED
+14686936_MED, 9603813_MED
+14686936_MED, 9097450_MED
+14686936_MED, 10051617_MED
+14686936_MED, 11121760_MED
+14686936_MED, 16535146_MED
+14686936_MED, 9464396_MED
+14686936_MED, 9687430_MED
+14686936_MED, 11206545_MED
+14686936_MED, 12169615_MED
+14686936_MED, 319255_MED
+14686936_MED, 12024264_MED
+14686936_MED, 11597449_MED
+14686936_MED, 10941783_MED
+14686936_MED, 12470812_MED
+14686936_MED, 16534986_MED
+14686936_MED, 12142423_MED
+14686936_MED, 11872479_MED
+14686936_MED, 3904603_MED
+14686936_MED, 16349372_MED
+14686936_MED, 21236150_MED
+14686936_MED, 12004116_MED
+14686936_MED, 9925618_MED
+14686936_MED, 10888648_MED
+14686936_MED, 8658163_MED
+14686936_MED, 16349072_MED
+14686936_MED, 9758799_MED
+14686936_MED, 16535459_MED
+14686936_MED, 9797256_MED
+14686936_MED, 9451814_MED
+14686936_MED, 10704475_MED
+14686936_MED, 9872785_MED
+14686936_MED, 9872784_MED
+14686936_MED, 11916671_MED
+14686936_MED, 7747950_MED
+14686936_MED, 9599142_MED
+15109783_MED, 8622911_MED
+15109783_MED, 2755508_MED
+15109783_MED, 10376593_MED
+15109783_MED, 21236150_MED
+15109783_MED, 10704475_MED
+15109783_MED, IND20440221_AGR
+15109783_MED, 12142423_MED
+15109783_MED, 10051617_MED
+15109783_MED, 10888648_MED
+15109783_MED, 12169615_MED
+15109783_MED, 4215366_MED
+15109783_MED, 3904603_MED
+15109783_MED, 19873108_MED
+15109783_MED, 9451814_MED
+15109783_MED, 8634015_MED
+15109783_MED, 12384570_MED
+15109783_MED, 11206545_MED
+15109783_MED, 11872504_MED
+15109783_MED, 10788350_MED
+15109783_MED, 11229937_MED
+15109783_MED, 12514006_MED
+15109783_MED, 11916671_MED
+15109783_MED, 11872479_MED
+15109783_MED, 11597449_MED
+15109783_MED, 11976141_MED
+15109783_MED, 14370199_MED
+15109783_MED, 9476352_MED
+15109783_MED, 9852508_MED
+15109783_MED, 7867914_MED
+15109783_MED, 8586275_MED
+15109783_MED, 12024264_MED
+15109783_MED, 11010859_MED
+15109783_MED, 1094307_MED
+15109783_MED, 6748694_MED
+15109783_MED, 11121760_MED
+15109783_MED, 6484871_MED
+15109783_MED, 12470812_MED
+15109783_MED, 8019688_MED
+15109783_MED, 8658163_MED
+15109783_MED, 8709840_MED
+15109783_MED, 9618454_MED
+15109783_MED, 10381871_MED
+15109783_MED, 11792317_MED
+15109783_MED, 9145395_MED
+15109783_MED, 8639330_MED
+15109783_MED, 11543124_MED
+15109783_MED, 24189813_MED
+15109783_MED, 8623526_MED
+15109783_MED, 9680320_MED
+16006335_MED, 12466840_MED
+16006335_MED, 8090765_MED
+16006335_MED, 15040264_MED
+16006335_MED, 7831817_MED
+16006335_MED, 9665128_MED
+10704475_MED, 8634015_MED
+10704475_MED, 4215366_MED
+10704475_MED, 2755508_MED
+10704475_MED, 16348190_MED
+10704475_MED, 8709840_MED
+10704475_MED, 1094307_MED
+10704475_MED, 19873108_MED
+10704475_MED, 16345577_MED
+10704475_MED, 10376593_MED
+10704475_MED, 9603813_MED
+10704475_MED, 9097450_MED
+10704475_MED, 9852508_MED
+10704475_MED, 16534914_MED
+10704475_MED, 16535146_MED
+10704475_MED, 7867914_MED
+10704475_MED, 8586275_MED
+10704475_MED, 9464396_MED
+10704475_MED, 9687430_MED
+10704475_MED, 6748694_MED
+10704475_MED, 319255_MED
+10704475_MED, IND20440221_AGR
+10704475_MED, 1622283_MED
+10704475_MED, 10941783_MED
+10704475_MED, 16534986_MED
+10704475_MED, 8019688_MED
+10704475_MED, 9476352_MED
+10704475_MED, 14370199_MED
+10704475_MED, 6484871_MED
+10704475_MED, 16349372_MED
+10704475_MED, 9925618_MED
+10704475_MED, 8658163_MED
+10704475_MED, 16349072_MED
+10704475_MED, 16349497_MED
+10704475_MED, 16535459_MED
+10704475_MED, 9797256_MED
+10704475_MED, 9872785_MED
+10704475_MED, 9872784_MED
+10704475_MED, 9145395_MED
+10704475_MED, 1444409_MED
+10704475_MED, 8639330_MED
+10704475_MED, 9172337_MED
+10704475_MED, 16348556_MED
+10704475_MED, 16346845_MED
+10704475_MED, 16345920_MED
+10704475_MED, 7747950_MED
+10704475_MED, 9599142_MED
+10704475_MED, 11543124_MED
+10704475_MED, 8623526_MED
+10704475_MED, 9680320_MED
+12514006_MED, 11010859_MED
+12514006_MED, 2755508_MED
+12514006_MED, 16348190_MED
+12514006_MED, 11229937_MED
+12514006_MED, 11872504_MED
+12514006_MED, 10788350_MED
+12514006_MED, 10051617_MED
+12514006_MED, 16534914_MED
+12514006_MED, IND20440221_AGR
+12514006_MED, 1622283_MED
+12514006_MED, 9618454_MED
+12514006_MED, 10704475_MED
+12514006_MED, 1444409_MED
+12514006_MED, 16348556_MED
+16151111_MED, 16535146_MED
+16151111_MED, 15040264_MED
+16151111_MED, 8622911_MED
+16151111_MED, 16349372_MED
+16151111_MED, 16349072_MED
+12466840_MED, 11140680_MED
+12466840_MED, 12028776_MED
+12466840_MED, 9665128_MED
+12466840_MED, 929457_MED
+12466840_MED, 12028775_MED
+12466840_MED, 3301527_MED
+12466840_MED, 17730400_MED
+12466840_MED, 8830243_MED
+16121181_MED, 11679667_MED
+16121181_MED, 11807553_MED
+16313450_MED, 12466840_MED
+16313450_MED, 3301527_MED
+16313450_MED, 8090765_MED
+16313450_MED, 9665128_MED
+16313450_MED, 17730400_MED
+9758799_MED, 16345577_MED
+9758799_MED, 21236150_MED
+9758799_MED, 16349497_MED
+9758799_MED, 16535459_MED
+9758799_MED, 9172337_MED
+9758799_MED, 16346845_MED
+9758799_MED, 16345920_MED
+9758799_MED, 24189813_MED
+12028776_MED, 2185476_MED
+12028776_MED, 6748694_MED
+12028776_MED, 9665128_MED
+12028776_MED, 778586_MED
+10761916_MED, 28312801_MED
+10761916_MED, 10457617_MED
+10761916_MED, 11038601_MED
+16643302_MED, 28312801_MED
+16643302_MED, 10761916_MED
+16643302_MED, 929457_MED
+16643302_MED, 10457617_MED
+16643302_MED, 11038601_MED
+16519233_MED, 12466840_MED
+16519233_MED, 11140680_MED
+16519233_MED, 2185476_MED
+16519233_MED, 8830243_MED
+16519233_MED, 9665128_MED
+16519233_MED, 778586_MED
+16599913_MED, 15002778_MED
+16599913_MED, 16006335_MED
+16599913_MED, 12028776_MED
+16599913_MED, 7831817_MED
+16599913_MED, 9665128_MED
+16796568_MED, 11679667_MED
+16796568_MED, 11807553_MED
+15002778_MED, 12466840_MED
+15002778_MED, 12028776_MED
+15002778_MED, 11140680_MED
+15002778_MED, 929457_MED
+15002778_MED, 8090765_MED
+15002778_MED, 8830243_MED
+15002778_MED, 9665128_MED
+15002778_MED, 12028775_MED

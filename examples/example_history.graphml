@@ -1,0 +1,1635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<!-- Created by igraph -->
+  <key id="v_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="v_size" for="node" attr.name="size" attr.type="double"/>
+  <key id="v_title" for="node" attr.name="title" attr.type="string"/>
+  <key id="v_citations" for="node" attr.name="citations" attr.type="double"/>
+  <key id="v_year" for="node" attr.name="year" attr.type="double"/>
+  <key id="v_name" for="node" attr.name="name" attr.type="string"/>
+  <key id="v_color" for="node" attr.name="color" attr.type="string"/>
+  <key id="v_clusterK" for="node" attr.name="clusterK" attr.type="double"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="n0">
+      <data key="v_label">Arrigo (2005)</data>
+      <data key="v_size">234</data>
+      <data key="v_title">Marine microorganisms and global nutrient cycles.</data>
+      <data key="v_citations">234</data>
+      <data key="v_year">2005</data>
+      <data key="v_name">16163345_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n1">
+      <data key="v_label">Whitman et al. (1998)</data>
+      <data key="v_size">1203</data>
+      <data key="v_title">Prokaryotes: the unseen majority.</data>
+      <data key="v_citations">1203</data>
+      <data key="v_year">1998</data>
+      <data key="v_name">9618454_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n2">
+      <data key="v_label">Karner et al. (2001)</data>
+      <data key="v_size">458</data>
+      <data key="v_title">Archaeal dominance in the mesopelagic zone of the Pacific Ocean.</data>
+      <data key="v_citations">458</data>
+      <data key="v_year">2001</data>
+      <data key="v_name">11206545_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n3">
+      <data key="v_label">Breitbart et al. (2002)</data>
+      <data key="v_size">383</data>
+      <data key="v_title">Genomic analysis of uncultured marine viral communities.</data>
+      <data key="v_citations">383</data>
+      <data key="v_year">2002</data>
+      <data key="v_name">12384570_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n4">
+      <data key="v_label">Hendrix et al. (2000)</data>
+      <data key="v_size">190</data>
+      <data key="v_title">The origins and ongoing evolution of viruses.</data>
+      <data key="v_citations">190</data>
+      <data key="v_year">2000</data>
+      <data key="v_name">11121760_MED</data>
+      <data key="v_color">#3f7f59</data>
+      <data key="v_clusterK">4</data>
+    </node>
+    <node id="n5">
+      <data key="v_label">Brussow and Hendrix (2002)</data>
+      <data key="v_size">197</data>
+      <data key="v_title">Phage genomics: small is beautiful.</data>
+      <data key="v_citations">197</data>
+      <data key="v_year">2002</data>
+      <data key="v_name">11792317_MED</data>
+      <data key="v_color">#7f663f</data>
+      <data key="v_clusterK">1</data>
+    </node>
+    <node id="n6">
+      <data key="v_label">Chen and Lu (2002)</data>
+      <data key="v_size">90</data>
+      <data key="v_title">Genomic sequence and evolution of marine cyanophage P60: a new insight on lytic and lysogenic phages.</data>
+      <data key="v_citations">90</data>
+      <data key="v_year">2002</data>
+      <data key="v_name">11976141_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n7">
+      <data key="v_label">Suttle and Chan (1994)</data>
+      <data key="v_size">122</data>
+      <data key="v_title">Dynamics and Distribution of Cyanophages and Their Effect on Marine Synechococcus spp.</data>
+      <data key="v_citations">122</data>
+      <data key="v_year">1994</data>
+      <data key="v_name">16349372_MED</data>
+      <data key="v_color">#3f597f</data>
+      <data key="v_clusterK">6</data>
+    </node>
+    <node id="n8">
+      <data key="v_label">Waterbury and Valois (1993)</data>
+      <data key="v_size">176</data>
+      <data key="v_title">Resistance to co-occurring phages enables marine synechococcus communities to coexist with cyanophages abundant in seawater.</data>
+      <data key="v_citations">176</data>
+      <data key="v_year">1993</data>
+      <data key="v_name">16349072_MED</data>
+      <data key="v_color">#3f597f</data>
+      <data key="v_clusterK">6</data>
+    </node>
+    <node id="n9">
+      <data key="v_label">Hendrix et al. (1999)</data>
+      <data key="v_size">433</data>
+      <data key="v_title">Evolutionary relationships among diverse bacteriophages and prophages: all the world&apos;s a phage.</data>
+      <data key="v_citations">433</data>
+      <data key="v_year">1999</data>
+      <data key="v_name">10051617_MED</data>
+      <data key="v_color">#4c7f3f</data>
+      <data key="v_clusterK">3</data>
+    </node>
+    <node id="n10">
+      <data key="v_label">Wommack and Colwell (2000)</data>
+      <data key="v_size">643</data>
+      <data key="v_title">Virioplankton: viruses in aquatic ecosystems.</data>
+      <data key="v_citations">643</data>
+      <data key="v_year">2000</data>
+      <data key="v_name">10704475_MED</data>
+      <data key="v_color">#3f7f59</data>
+      <data key="v_clusterK">4</data>
+    </node>
+    <node id="n11">
+      <data key="v_label">Fuhrman (1999)</data>
+      <data key="v_size">625</data>
+      <data key="v_title">Marine viruses and their biogeochemical and ecological effects.</data>
+      <data key="v_citations">625</data>
+      <data key="v_year">1999</data>
+      <data key="v_name">10376593_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n12">
+      <data key="v_label">Wommack et al. (1999)</data>
+      <data key="v_size">83</data>
+      <data key="v_title">Population dynamics of chesapeake bay virioplankton: total-community analysis by pulsed-field gel electrophoresis</data>
+      <data key="v_citations">83</data>
+      <data key="v_year">1999</data>
+      <data key="v_name">9872784_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n13">
+      <data key="v_label">Waldor and Mekalanos (1996)</data>
+      <data key="v_size">774</data>
+      <data key="v_title">Lysogenic conversion by a filamentous phage encoding cholera toxin.</data>
+      <data key="v_citations">774</data>
+      <data key="v_year">1996</data>
+      <data key="v_name">8658163_MED</data>
+      <data key="v_color">#7f663f</data>
+      <data key="v_clusterK">1</data>
+    </node>
+    <node id="n14">
+      <data key="v_label">Jiang and Paul (1998)</data>
+      <data key="v_size">95</data>
+      <data key="v_title">Gene transfer by transduction in the marine environment.</data>
+      <data key="v_citations">95</data>
+      <data key="v_year">1998</data>
+      <data key="v_name">9687430_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n15">
+      <data key="v_label">SPENCER (1955)</data>
+      <data key="v_size">24</data>
+      <data key="v_title">A marine bacteriophage.</data>
+      <data key="v_citations">24</data>
+      <data key="v_year">1955</data>
+      <data key="v_name">14370199_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n16">
+      <data key="v_label">Brockhurst et al. (2006)</data>
+      <data key="v_size">18</data>
+      <data key="v_title">The impact of phages on interspecific competition in experimental populations of bacteria.</data>
+      <data key="v_citations">18</data>
+      <data key="v_year">2006</data>
+      <data key="v_name">17166259_MED</data>
+      <data key="v_color">#723f7f</data>
+      <data key="v_clusterK">8</data>
+    </node>
+    <node id="n17">
+      <data key="v_label">Weinbauer (2004)</data>
+      <data key="v_size">496</data>
+      <data key="v_title">Ecology of prokaryotic viruses.</data>
+      <data key="v_citations">496</data>
+      <data key="v_year">2004</data>
+      <data key="v_name">15109783_MED</data>
+      <data key="v_color">#3f7f59</data>
+      <data key="v_clusterK">4</data>
+    </node>
+    <node id="n18">
+      <data key="v_label">Ashelford et al. (2003)</data>
+      <data key="v_size">81</data>
+      <data key="v_title">Elevated abundance of bacteriophage infecting bacteria in soil.</data>
+      <data key="v_citations">81</data>
+      <data key="v_year">2003</data>
+      <data key="v_name">12514006_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n19">
+      <data key="v_label">Ashelford et al. (2000)</data>
+      <data key="v_size">32</data>
+      <data key="v_title">Seasonal population dynamics and interactions of competing bacteriophages and their host in the rhizosphere.</data>
+      <data key="v_citations">32</data>
+      <data key="v_year">2000</data>
+      <data key="v_name">11010859_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n20">
+      <data key="v_label">Proctor (1997)</data>
+      <data key="v_size">26</data>
+      <data key="v_title">Advances in the study of marine viruses.</data>
+      <data key="v_citations">26</data>
+      <data key="v_year">1997</data>
+      <data key="v_name">9145395_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n21">
+      <data key="v_label">Weinbauer and Rassoulzadegan (2004)</data>
+      <data key="v_size">212</data>
+      <data key="v_title">Are viruses driving microbial diversification and diversity?</data>
+      <data key="v_citations">212</data>
+      <data key="v_year">2004</data>
+      <data key="v_name">14686936_MED</data>
+      <data key="v_color">#7f3f65</data>
+      <data key="v_clusterK">9</data>
+    </node>
+    <node id="n22">
+      <data key="v_label">Paul et al. (2002)</data>
+      <data key="v_size">38</data>
+      <data key="v_title">Marine phage genomics.</data>
+      <data key="v_citations">38</data>
+      <data key="v_year">2002</data>
+      <data key="v_name">12470812_MED</data>
+      <data key="v_color">#7f663f</data>
+      <data key="v_clusterK">1</data>
+    </node>
+    <node id="n23">
+      <data key="v_label">Lawrence et al. (2002)</data>
+      <data key="v_size">131</data>
+      <data key="v_title">Imbroglios of viral taxonomy: genetic exchange and failings of phenetic approaches.</data>
+      <data key="v_citations">131</data>
+      <data key="v_year">2002</data>
+      <data key="v_name">12169615_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n24">
+      <data key="v_label">Ohnishi et al. (2001)</data>
+      <data key="v_size">125</data>
+      <data key="v_title">Diversification of Escherichia coli genomes: are bacteriophages the major contributors?</data>
+      <data key="v_citations">125</data>
+      <data key="v_year">2001</data>
+      <data key="v_name">11597449_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n25">
+      <data key="v_label">Zhong et al. (2002)</data>
+      <data key="v_size">73</data>
+      <data key="v_title">Phylogenetic diversity of marine cyanophage isolates and natural virus communities as revealed by sequences of viral capsid assembly protein gene g20.</data>
+      <data key="v_citations">73</data>
+      <data key="v_year">2002</data>
+      <data key="v_name">11916671_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n26">
+      <data key="v_label">Rohwer and Edwards (2002)</data>
+      <data key="v_size">239</data>
+      <data key="v_title">The Phage Proteomic Tree: a genome-based taxonomy for phage.</data>
+      <data key="v_citations">239</data>
+      <data key="v_year">2002</data>
+      <data key="v_name">12142423_MED</data>
+      <data key="v_color">#7f663f</data>
+      <data key="v_clusterK">1</data>
+    </node>
+    <node id="n27">
+      <data key="v_label">Harcombe and Bull (2005)</data>
+      <data key="v_size">19</data>
+      <data key="v_title">Impact of phages on two-species bacterial communities.</data>
+      <data key="v_citations">19</data>
+      <data key="v_year">2005</data>
+      <data key="v_name">16151111_MED</data>
+      <data key="v_color">#723f7f</data>
+      <data key="v_clusterK">8</data>
+    </node>
+    <node id="n28">
+      <data key="v_label">van et al. (1999)</data>
+      <data key="v_size">108</data>
+      <data key="v_title">Changes in bacterial and eukaryotic community structure after mass lysis of filamentous cyanobacteria associated with viruses.</data>
+      <data key="v_citations">108</data>
+      <data key="v_year">1999</data>
+      <data key="v_name">9925618_MED</data>
+      <data key="v_color">#723f7f</data>
+      <data key="v_clusterK">8</data>
+    </node>
+    <node id="n29">
+      <data key="v_label">Wommack et al. (1999)</data>
+      <data key="v_size">41</data>
+      <data key="v_title">Hybridization analysis of chesapeake bay virioplankton</data>
+      <data key="v_citations">41</data>
+      <data key="v_year">1999</data>
+      <data key="v_name">9872785_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n30">
+      <data key="v_label">Fuller et al. (1998)</data>
+      <data key="v_size">70</data>
+      <data key="v_title">Occurrence of a sequence in marine cyanophages similar to that of T4 g20 and its application to PCR-based detection and quantification techniques.</data>
+      <data key="v_citations">70</data>
+      <data key="v_year">1998</data>
+      <data key="v_name">9603813_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n31">
+      <data key="v_label">Furuta et al. (1997)</data>
+      <data key="v_size">31</data>
+      <data key="v_title">Chlorella virus PBCV-1 encodes a homolog of the bacteriophage T4 UV damage repair gene denV.</data>
+      <data key="v_citations">31</data>
+      <data key="v_year">1997</data>
+      <data key="v_name">9097450_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n32">
+      <data key="v_label">Hennes et al. (1995)</data>
+      <data key="v_size">54</data>
+      <data key="v_title">Fluorescently Labeled Virus Probes Show that Natural Virus Populations Can Control the Structure of Marine Microbial Communities.</data>
+      <data key="v_citations">54</data>
+      <data key="v_year">1995</data>
+      <data key="v_name">16535146_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n33">
+      <data key="v_label">Hennes and Simon (1995)</data>
+      <data key="v_size">49</data>
+      <data key="v_title">Significance of bacteriophages for controlling bacterioplankton growth in a mesotrophic lake.</data>
+      <data key="v_citations">49</data>
+      <data key="v_year">1995</data>
+      <data key="v_name">16534914_MED</data>
+      <data key="v_color">#4c7f3f</data>
+      <data key="v_clusterK">3</data>
+    </node>
+    <node id="n34">
+      <data key="v_label">Villarreal and DeFilippis (2000)</data>
+      <data key="v_size">86</data>
+      <data key="v_title">A hypothesis for DNA viruses as the origin of eukaryotic replication proteins.</data>
+      <data key="v_citations">86</data>
+      <data key="v_year">2000</data>
+      <data key="v_name">10888648_MED</data>
+      <data key="v_color">#3f7f59</data>
+      <data key="v_clusterK">4</data>
+    </node>
+    <node id="n35">
+      <data key="v_label">Buckling and Rainey (2002)</data>
+      <data key="v_size">138</data>
+      <data key="v_title">The role of parasites in sympatric and allopatric host diversification.</data>
+      <data key="v_citations">138</data>
+      <data key="v_year">2002</data>
+      <data key="v_name">12466840_MED</data>
+      <data key="v_color">#7f3f65</data>
+      <data key="v_clusterK">9</data>
+    </node>
+    <node id="n36">
+      <data key="v_label">Buckling et al. (2000)</data>
+      <data key="v_size">93</data>
+      <data key="v_title">Disturbance and diversity in experimental microcosms.</data>
+      <data key="v_citations">93</data>
+      <data key="v_year">2000</data>
+      <data key="v_name">11140680_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n37">
+      <data key="v_label">Weinbauer and Suttle (1996)</data>
+      <data key="v_size">55</data>
+      <data key="v_title">Potential significance of lysogeny to bacteriophage production and bacterial mortality in coastal waters of the gulf of Mexico.</data>
+      <data key="v_citations">55</data>
+      <data key="v_year">1996</data>
+      <data key="v_name">16535459_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n38">
+      <data key="v_label">Thingstad et al. (1993)</data>
+      <data key="v_size">19</data>
+      <data key="v_title">Are viruses important partners in pelagic fend webs?</data>
+      <data key="v_citations">19</data>
+      <data key="v_year">1993</data>
+      <data key="v_name">21236150_MED</data>
+      <data key="v_color">#3f7f59</data>
+      <data key="v_clusterK">4</data>
+    </node>
+    <node id="n39">
+      <data key="v_label">Wommack et al. (1992)</data>
+      <data key="v_size">70</data>
+      <data key="v_title">Distribution of viruses in the Chesapeake Bay.</data>
+      <data key="v_citations">70</data>
+      <data key="v_year">1992</data>
+      <data key="v_name">1444409_MED</data>
+      <data key="v_color">#3f7f59</data>
+      <data key="v_clusterK">4</data>
+    </node>
+    <node id="n40">
+      <data key="v_label">Jensen et al. (1998)</data>
+      <data key="v_size">100</data>
+      <data key="v_title">Prevalence of broad-host-range lytic bacteriophages of Sphaerotilus natans, Escherichia coli, and Pseudomonas aeruginosa.</data>
+      <data key="v_citations">100</data>
+      <data key="v_year">1998</data>
+      <data key="v_name">9464396_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n41">
+      <data key="v_label">Schrader et al. (1997)</data>
+      <data key="v_size">23</data>
+      <data key="v_title">Bacteriophage infection and multiplication occur in Pseudomonas aeruginosa starved for 5 years.</data>
+      <data key="v_citations">23</data>
+      <data key="v_year">1997</data>
+      <data key="v_name">9476352_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n42">
+      <data key="v_label">Bratbak et al. (1990)</data>
+      <data key="v_size">74</data>
+      <data key="v_title">Viruses as partners in spring bloom microbial trophodynamics.</data>
+      <data key="v_citations">74</data>
+      <data key="v_year">1990</data>
+      <data key="v_name">16348190_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n43">
+      <data key="v_label">von et al. (1997)</data>
+      <data key="v_size">925</data>
+      <data key="v_title">Determination of microbial diversity in environmental samples: pitfalls of PCR-based rRNA analysis.</data>
+      <data key="v_citations">925</data>
+      <data key="v_year">1997</data>
+      <data key="v_name">9451814_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n44">
+      <data key="v_label">Bell et al. (2005)</data>
+      <data key="v_size">291</data>
+      <data key="v_title">The contribution of species richness and composition to bacterial services.</data>
+      <data key="v_citations">291</data>
+      <data key="v_year">2005</data>
+      <data key="v_name">16121181_MED</data>
+      <data key="v_color">#723f7f</data>
+      <data key="v_clusterK">8</data>
+    </node>
+    <node id="n45">
+      <data key="v_label">MacLean (2005)</data>
+      <data key="v_size">55</data>
+      <data key="v_title">Adaptive radiation in microbial microcosms.</data>
+      <data key="v_citations">55</data>
+      <data key="v_year">2005</data>
+      <data key="v_name">16313450_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n46">
+      <data key="v_label">Short and Suttle (2002)</data>
+      <data key="v_size">64</data>
+      <data key="v_title">Sequence analysis of marine virus communities reveals that groups of related algal viruses are widely distributed in nature.</data>
+      <data key="v_citations">64</data>
+      <data key="v_year">2002</data>
+      <data key="v_name">11872479_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n47">
+      <data key="v_label">Garza and Suttle (1998)</data>
+      <data key="v_size">38</data>
+      <data key="v_title">The Effect of Cyanophages on the Mortality of Synechococcus spp. and Selection for UV Resistant Viral Communities.</data>
+      <data key="v_citations">38</data>
+      <data key="v_year">1998</data>
+      <data key="v_name">9852508_MED</data>
+      <data key="v_color">#3f597f</data>
+      <data key="v_clusterK">6</data>
+    </node>
+    <node id="n48">
+      <data key="v_label">Bergh et al. (1989)</data>
+      <data key="v_size">471</data>
+      <data key="v_title">High abundance of viruses found in aquatic environments.</data>
+      <data key="v_citations">471</data>
+      <data key="v_year">1989</data>
+      <data key="v_name">2755508_MED</data>
+      <data key="v_color">#3f7f59</data>
+      <data key="v_clusterK">4</data>
+    </node>
+    <node id="n49">
+      <data key="v_label">Zillig et al. (1996)</data>
+      <data key="v_size">75</data>
+      <data key="v_title">Viruses, plasmids and other genetic elements of thermophilic and hyperthermophilic Archaea.</data>
+      <data key="v_citations">75</data>
+      <data key="v_year">1996</data>
+      <data key="v_name">8639330_MED</data>
+      <data key="v_color">#3f7f59</data>
+      <data key="v_clusterK">4</data>
+    </node>
+    <node id="n50">
+      <data key="v_label">Danovaro et al. (2001)</data>
+      <data key="v_size">70</data>
+      <data key="v_title">Determination of virus abundance in marine sediments.</data>
+      <data key="v_citations">70</data>
+      <data key="v_year">2001</data>
+      <data key="v_name">11229937_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n51">
+      <data key="v_label">Wichels et al. (1998)</data>
+      <data key="v_size">71</data>
+      <data key="v_title">Bacteriophage diversity in the North Sea.</data>
+      <data key="v_citations">71</data>
+      <data key="v_year">1998</data>
+      <data key="v_name">9797256_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n52">
+      <data key="v_label">Weinbauer and Höfle (1998)</data>
+      <data key="v_size">60</data>
+      <data key="v_title">Significance of viral lysis and flagellate grazing as factors controlling bacterioplankton production in a eutrophic lake.</data>
+      <data key="v_citations">60</data>
+      <data key="v_year">1998</data>
+      <data key="v_name">16349497_MED</data>
+      <data key="v_color">#4c7f3f</data>
+      <data key="v_clusterK">3</data>
+    </node>
+    <node id="n53">
+      <data key="v_label">Tuomi et al. (1997)</data>
+      <data key="v_size">23</data>
+      <data key="v_title">Bacterial population dynamics in a meromictic lake.</data>
+      <data key="v_citations">23</data>
+      <data key="v_year">1997</data>
+      <data key="v_name">9172337_MED</data>
+      <data key="v_color">#4c7f3f</data>
+      <data key="v_clusterK">3</data>
+    </node>
+    <node id="n54">
+      <data key="v_label">Marsh and Wellington (1994)</data>
+      <data key="v_size">29</data>
+      <data key="v_title">Phage-host interactions in soil.</data>
+      <data key="v_citations">29</data>
+      <data key="v_year">1994</data>
+      <data key="v_name">IND20440221_AGR</data>
+      <data key="v_color">#7f3f65</data>
+      <data key="v_clusterK">9</data>
+    </node>
+    <node id="n55">
+      <data key="v_label">Hara et al. (1991)</data>
+      <data key="v_size">57</data>
+      <data key="v_title">Abundance of viruses in marine waters: assessment by epifluorescence and transmission electron microscopy.</data>
+      <data key="v_citations">57</data>
+      <data key="v_year">1991</data>
+      <data key="v_name">16348556_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n56">
+      <data key="v_label">Olsthoorn et al. (1995)</data>
+      <data key="v_size">26</data>
+      <data key="v_title">Nucleotide sequence of a single-stranded RNA phage from Pseudomonas aeruginosa: kinship to coliphages and conservation of regulatory RNA structures.</data>
+      <data key="v_citations">26</data>
+      <data key="v_year">1995</data>
+      <data key="v_name">7831817_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n57">
+      <data key="v_label">Staley and Konopka (1985)</data>
+      <data key="v_size">384</data>
+      <data key="v_title">Measurement of in situ activities of nonphotosynthetic microorganisms in aquatic and terrestrial habitats.</data>
+      <data key="v_citations">384</data>
+      <data key="v_year">1985</data>
+      <data key="v_name">3904603_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n58">
+      <data key="v_label">Fuhrman and Azam (1980)</data>
+      <data key="v_size">109</data>
+      <data key="v_title">Bacterioplankton secondary production estimates for coastal waters of british columbia, antarctica, and california.</data>
+      <data key="v_citations">109</data>
+      <data key="v_year">1980</data>
+      <data key="v_name">16345577_MED</data>
+      <data key="v_color">#4c7f3f</data>
+      <data key="v_clusterK">3</data>
+    </node>
+    <node id="n59">
+      <data key="v_label">Weinbauer and Hofle (1998)</data>
+      <data key="v_size">22</data>
+      <data key="v_title">Distribution and life strategies of two bacterial populations in a eutrophic lake</data>
+      <data key="v_citations">22</data>
+      <data key="v_year">1998</data>
+      <data key="v_name">9758799_MED</data>
+      <data key="v_color">#4c7f3f</data>
+      <data key="v_clusterK">3</data>
+    </node>
+    <node id="n60">
+      <data key="v_label">Ward and Carlucci (1985)</data>
+      <data key="v_size">37</data>
+      <data key="v_title">Marine ammonia- and nitrite-oxidizing bacteria: serological diversity determined by immunofluorescence in culture and in the environment.</data>
+      <data key="v_citations">37</data>
+      <data key="v_year">1985</data>
+      <data key="v_name">16346845_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n61">
+      <data key="v_label">Dahle and Laake (1982)</data>
+      <data key="v_size">15</data>
+      <data key="v_title">Diversity dynamics of marine bacteria studied by immunofluorescent staining on membrane filters.</data>
+      <data key="v_citations">15</data>
+      <data key="v_year">1982</data>
+      <data key="v_name">16345920_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n62">
+      <data key="v_label">Stewart and Levin (1984)</data>
+      <data key="v_size">73</data>
+      <data key="v_title">The population biology of bacterial viruses: why be temperate.</data>
+      <data key="v_citations">73</data>
+      <data key="v_year">1984</data>
+      <data key="v_name">6484871_MED</data>
+      <data key="v_color">#723f7f</data>
+      <data key="v_clusterK">8</data>
+    </node>
+    <node id="n63">
+      <data key="v_label">Buckling and Rainey (2002)</data>
+      <data key="v_size">148</data>
+      <data key="v_title">Antagonistic coevolution between a bacterium and a bacteriophage.</data>
+      <data key="v_citations">148</data>
+      <data key="v_year">2002</data>
+      <data key="v_name">12028776_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n64">
+      <data key="v_label">Harms et al. (2000)</data>
+      <data key="v_size">330</data>
+      <data key="v_title">Pervasive density-dependent recruitment enhances seedling diversity in a tropical forest.</data>
+      <data key="v_citations">330</data>
+      <data key="v_year">2000</data>
+      <data key="v_name">10761916_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n65">
+      <data key="v_label">Bell et al. (2006)</data>
+      <data key="v_size">127</data>
+      <data key="v_title">Plant pathogens drive density-dependent seedling mortality in a tropical tree.</data>
+      <data key="v_citations">127</data>
+      <data key="v_year">2006</data>
+      <data key="v_name">16643302_MED</data>
+      <data key="v_color">#3f597f</data>
+      <data key="v_clusterK">6</data>
+    </node>
+    <node id="n66">
+      <data key="v_label">Crawford et al. (2004)</data>
+      <data key="v_size">37</data>
+      <data key="v_title">Towards an evolutionary ecology of life in soil.</data>
+      <data key="v_citations">37</data>
+      <data key="v_year">2004</data>
+      <data key="v_name">16701347_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n67">
+      <data key="v_label">Torsvik et al. (2002)</data>
+      <data key="v_size">376</data>
+      <data key="v_title">Prokaryotic diversity--magnitude, dynamics, and controlling factors.</data>
+      <data key="v_citations">376</data>
+      <data key="v_year">2002</data>
+      <data key="v_name">12004116_MED</data>
+      <data key="v_color">#4c7f3f</data>
+      <data key="v_clusterK">3</data>
+    </node>
+    <node id="n68">
+      <data key="v_label">Middelboe et al. (2001)</data>
+      <data key="v_size">55</data>
+      <data key="v_title">Effects of Bacteriophages on the Population Dynamics of Four Strains of Pelagic Marine Bacteria.</data>
+      <data key="v_citations">55</data>
+      <data key="v_year">2001</data>
+      <data key="v_name">12024264_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n69">
+      <data key="v_label">Tilman (1982)</data>
+      <data key="v_size">26</data>
+      <data key="v_title">Resource competition and community structure.</data>
+      <data key="v_citations">26</data>
+      <data key="v_year">1982</data>
+      <data key="v_name">7162524_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n70">
+      <data key="v_label">Buckling et al. (2006)</data>
+      <data key="v_size">30</data>
+      <data key="v_title">Antagonistic coevolution with parasites increases the cost of host deleterious mutations.</data>
+      <data key="v_citations">30</data>
+      <data key="v_year">2006</data>
+      <data key="v_name">16519233_MED</data>
+      <data key="v_color">#7f3f65</data>
+      <data key="v_clusterK">9</data>
+    </node>
+    <node id="n71">
+      <data key="v_label">Brockhurst et al. (2006)</data>
+      <data key="v_size">41</data>
+      <data key="v_title">Spatial heterogeneity and the stability of host-parasite coexistence.</data>
+      <data key="v_citations">41</data>
+      <data key="v_year">2006</data>
+      <data key="v_name">16599913_MED</data>
+      <data key="v_color">#7f3f65</data>
+      <data key="v_clusterK">9</data>
+    </node>
+    <node id="n72">
+      <data key="v_label">Brockhurst et al. (2005)</data>
+      <data key="v_size">44</data>
+      <data key="v_title">The effect of a bacteriophage on diversification of the opportunistic bacterial pathogen, Pseudomonas aeruginosa.</data>
+      <data key="v_citations">44</data>
+      <data key="v_year">2005</data>
+      <data key="v_name">16006335_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n73">
+      <data key="v_label">Snyder et al. (2006)</data>
+      <data key="v_size">106</data>
+      <data key="v_title">Predator biodiversity strengthens herbivore suppression.</data>
+      <data key="v_citations">106</data>
+      <data key="v_year">2006</data>
+      <data key="v_name">16796568_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n74">
+      <data key="v_label">Brockhurst et al. (2004)</data>
+      <data key="v_size">34</data>
+      <data key="v_title">The effect of spatial heterogeneity and parasites on the evolution of host diversity.</data>
+      <data key="v_citations">34</data>
+      <data key="v_year">2004</data>
+      <data key="v_name">15002778_MED</data>
+      <data key="v_color">#7f3f65</data>
+      <data key="v_clusterK">9</data>
+    </node>
+    <node id="n75">
+      <data key="v_label">Rainey and Travisano (1998)</data>
+      <data key="v_size">506</data>
+      <data key="v_title">Adaptive radiation in a heterogeneous environment.</data>
+      <data key="v_citations">506</data>
+      <data key="v_year">1998</data>
+      <data key="v_name">9665128_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n76">
+      <data key="v_label">Holt (1977)</data>
+      <data key="v_size">528</data>
+      <data key="v_title">Predation, apparent competition, and the structure of prey communities.</data>
+      <data key="v_citations">528</data>
+      <data key="v_year">1977</data>
+      <data key="v_name">929457_MED</data>
+      <data key="v_color">#723f7f</data>
+      <data key="v_clusterK">8</data>
+    </node>
+    <node id="n77">
+      <data key="v_label">Vamosi and Schluter (2002)</data>
+      <data key="v_size">14</data>
+      <data key="v_title">Impacts of trout predation on fitness of sympatric sticklebacks and their hybrids.</data>
+      <data key="v_citations">14</data>
+      <data key="v_year">2002</data>
+      <data key="v_name">12028775_MED</data>
+      <data key="v_color">#7f3f65</data>
+      <data key="v_clusterK">9</data>
+    </node>
+    <node id="n78">
+      <data key="v_label">Helling et al. (1987)</data>
+      <data key="v_size">129</data>
+      <data key="v_title">Evolution of Escherichia coli during growth in a constant environment.</data>
+      <data key="v_citations">129</data>
+      <data key="v_year">1987</data>
+      <data key="v_name">3301527_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n79">
+      <data key="v_label">Schluter (1994)</data>
+      <data key="v_size">170</data>
+      <data key="v_title">Experimental evidence that competition promotes divergence in adaptive radiation.</data>
+      <data key="v_citations">170</data>
+      <data key="v_year">1994</data>
+      <data key="v_name">17730400_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n80">
+      <data key="v_label">Rainey and Bailey (1996)</data>
+      <data key="v_size">117</data>
+      <data key="v_title">Physical and genetic map of the Pseudomonas fluorescens SBW25 chromosome.</data>
+      <data key="v_citations">117</data>
+      <data key="v_year">1996</data>
+      <data key="v_name">8830243_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n81">
+      <data key="v_label">Barksdale and Arden (1974)</data>
+      <data key="v_size">97</data>
+      <data key="v_title">Persisting bacteriophage infections, lysogeny, and phage conversions.</data>
+      <data key="v_citations">97</data>
+      <data key="v_year">1974</data>
+      <data key="v_name">4215366_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n82">
+      <data key="v_label">Edlin et al. (1975)</data>
+      <data key="v_size">49</data>
+      <data key="v_title">Lambda lysogens of E. coli reproduce more rapidly than non-lysogens.</data>
+      <data key="v_citations">49</data>
+      <data key="v_year">1975</data>
+      <data key="v_name">1094307_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n83">
+      <data key="v_label">Lin et al. (1977)</data>
+      <data key="v_size">38</data>
+      <data key="v_title">Increased reproductive fitness of Escherichia coli lambda lysogens.</data>
+      <data key="v_citations">38</data>
+      <data key="v_year">1977</data>
+      <data key="v_name">319255_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n84">
+      <data key="v_label">Levin and Bull (2004)</data>
+      <data key="v_size">145</data>
+      <data key="v_title">Population and evolutionary dynamics of phage therapy.</data>
+      <data key="v_citations">145</data>
+      <data key="v_year">2004</data>
+      <data key="v_name">15040264_MED</data>
+      <data key="v_color">#7f663f</data>
+      <data key="v_clusterK">1</data>
+    </node>
+    <node id="n85">
+      <data key="v_label">Doolittle (1999)</data>
+      <data key="v_size">685</data>
+      <data key="v_title">Phylogenetic classification and the universal tree.</data>
+      <data key="v_citations">685</data>
+      <data key="v_year">1999</data>
+      <data key="v_name">10381871_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n86">
+      <data key="v_label">Paul (1999)</data>
+      <data key="v_size">34</data>
+      <data key="v_title">Microbial gene transfer: an ecological perspective.</data>
+      <data key="v_citations">34</data>
+      <data key="v_year">1999</data>
+      <data key="v_name">10941783_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n87">
+      <data key="v_label">Merril et al. (1996)</data>
+      <data key="v_size">174</data>
+      <data key="v_title">Long-circulating bacteriophage as antibacterial agents.</data>
+      <data key="v_citations">174</data>
+      <data key="v_year">1996</data>
+      <data key="v_name">8622911_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n88">
+      <data key="v_label">Hamilton et al. (1990)</data>
+      <data key="v_size">430</data>
+      <data key="v_title">Sexual reproduction as an adaptation to resist parasites (a review).</data>
+      <data key="v_citations">430</data>
+      <data key="v_year">1990</data>
+      <data key="v_name">2185476_MED</data>
+      <data key="v_color">#7f3f65</data>
+      <data key="v_clusterK">9</data>
+    </node>
+    <node id="n89">
+      <data key="v_label">Lenski (1984)</data>
+      <data key="v_size">35</data>
+      <data key="v_title">Coevolution of bacteria and phage: are there endless cycles of bacterial defenses and phage counterdefenses?</data>
+      <data key="v_citations">35</data>
+      <data key="v_year">1984</data>
+      <data key="v_name">6748694_MED</data>
+      <data key="v_color">#7f663f</data>
+      <data key="v_clusterK">1</data>
+    </node>
+    <node id="n90">
+      <data key="v_label">Ripp et al. (1994)</data>
+      <data key="v_size">17</data>
+      <data key="v_title">Transduction of a freshwater microbial community by a new Pseudomonas aeruginosa generalized transducing phage, UT1.</data>
+      <data key="v_citations">17</data>
+      <data key="v_year">1994</data>
+      <data key="v_name">8019688_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n91">
+      <data key="v_label">Cheetham and Katz (1995)</data>
+      <data key="v_size">144</data>
+      <data key="v_title">A role for bacteriophages in the evolution and transfer of bacterial virulence determinants.</data>
+      <data key="v_citations">144</data>
+      <data key="v_year">1995</data>
+      <data key="v_name">8709840_MED</data>
+      <data key="v_color">#7f3f65</data>
+      <data key="v_clusterK">9</data>
+    </node>
+    <node id="n92">
+      <data key="v_label">Ellis and Delbruck (1939)</data>
+      <data key="v_size">176</data>
+      <data key="v_title">THE GROWTH OF BACTERIOPHAGE.</data>
+      <data key="v_citations">176</data>
+      <data key="v_year">1939</data>
+      <data key="v_name">19873108_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n93">
+      <data key="v_label">Ackermann (1996)</data>
+      <data key="v_size">28</data>
+      <data key="v_title">Frequency of morphological phage descriptions in 1995.</data>
+      <data key="v_citations">28</data>
+      <data key="v_year">1996</data>
+      <data key="v_name">8634015_MED</data>
+      <data key="v_color">#7f663f</data>
+      <data key="v_clusterK">1</data>
+    </node>
+    <node id="n94">
+      <data key="v_label">Danovaro et al. (2002)</data>
+      <data key="v_size">45</data>
+      <data key="v_title">Higher abundance of bacteria than of viruses in deep Mediterranean sediments.</data>
+      <data key="v_citations">45</data>
+      <data key="v_year">2002</data>
+      <data key="v_name">11872504_MED</data>
+      <data key="v_color">#7f663f</data>
+      <data key="v_clusterK">1</data>
+    </node>
+    <node id="n95">
+      <data key="v_label">Danovaro and Serresi (2000)</data>
+      <data key="v_size">39</data>
+      <data key="v_title">Viral density and virus-to-bacterium ratio in deep-sea sediments of the Eastern Mediterranean.</data>
+      <data key="v_citations">39</data>
+      <data key="v_year">2000</data>
+      <data key="v_name">10788350_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n96">
+      <data key="v_label">Korona et al. (1994)</data>
+      <data key="v_size">73</data>
+      <data key="v_title">Evidence for multiple adaptive peaks from populations of bacteria evolving in a structured habitat.</data>
+      <data key="v_citations">73</data>
+      <data key="v_year">1994</data>
+      <data key="v_name">8090765_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n97">
+      <data key="v_label">Ogunseitan et al. (1992)</data>
+      <data key="v_size">16</data>
+      <data key="v_title">Application of DNA probes to analysis of bacteriophage distribution patterns in the environment.</data>
+      <data key="v_citations">16</data>
+      <data key="v_year">1992</data>
+      <data key="v_name">1622283_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n98">
+      <data key="v_label">Inoue et al. (1995)</data>
+      <data key="v_size">22</data>
+      <data key="v_title">Cloning and sequence analysis of Vibrio parahaemolyticus ompK gene encoding a 26-kDa outer membrane protein, OmpK, that serves as receptor for a broad-host-range vibriophage, KVP40.</data>
+      <data key="v_citations">22</data>
+      <data key="v_year">1995</data>
+      <data key="v_name">8586275_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n99">
+      <data key="v_label">Inoue et al. (1995)</data>
+      <data key="v_size">22</data>
+      <data key="v_title">A 26-kDa outer membrane protein, OmpK, common to Vibrio species is the receptor for a broad-host-range vibriophage, KVP40.</data>
+      <data key="v_citations">22</data>
+      <data key="v_year">1995</data>
+      <data key="v_name">7867914_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n100">
+      <data key="v_label">Ripp and Miller (1995)</data>
+      <data key="v_size">15</data>
+      <data key="v_title">Effects of Suspended Particulates on the Frequency of Transduction among Pseudomonas aeruginosa in a Freshwater Environment.</data>
+      <data key="v_citations">15</data>
+      <data key="v_year">1995</data>
+      <data key="v_name">16534986_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n101">
+      <data key="v_label">Gilbert et al. (1994)</data>
+      <data key="v_size">46</data>
+      <data key="v_title">Density and distance-to-adult effects of a canker disease of trees in a moist tropical forest.</data>
+      <data key="v_citations">46</data>
+      <data key="v_year">1994</data>
+      <data key="v_name">28312801_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n102">
+      <data key="v_label">Chen and Suttle (1995)</data>
+      <data key="v_size">50</data>
+      <data key="v_title">Amplification of DNA polymerase gene fragments from viruses infecting microalgae.</data>
+      <data key="v_citations">50</data>
+      <data key="v_year">1995</data>
+      <data key="v_name">7747950_MED</data>
+      <data key="v_color">#3f7f59</data>
+      <data key="v_clusterK">4</data>
+    </node>
+    <node id="n103">
+      <data key="v_label">Pennisi (1998)</data>
+      <data key="v_size">46</data>
+      <data key="v_title">Genome data shake tree of life.</data>
+      <data key="v_citations">46</data>
+      <data key="v_year">1998</data>
+      <data key="v_name">9599142_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n104">
+      <data key="v_label">Kepner et al. (1998)</data>
+      <data key="v_size">29</data>
+      <data key="v_title">Viruses in Antarctic lakes.</data>
+      <data key="v_citations">29</data>
+      <data key="v_year">1998</data>
+      <data key="v_name">11543124_MED</data>
+      <data key="v_color">#3f7f59</data>
+      <data key="v_clusterK">4</data>
+    </node>
+    <node id="n105">
+      <data key="v_label">Proctor et al. (1993)</data>
+      <data key="v_size">34</data>
+      <data key="v_title">Calibrating estimates of phage-induced mortality in marine bacteria: Ultrastructural studies of marine bacteriophage development from one-step growth experiments.</data>
+      <data key="v_citations">34</data>
+      <data key="v_year">1993</data>
+      <data key="v_name">24189813_MED</data>
+      <data key="v_color">#7f663f</data>
+      <data key="v_clusterK">1</data>
+    </node>
+    <node id="n106">
+      <data key="v_label">Chen and Suttle (1996)</data>
+      <data key="v_size">61</data>
+      <data key="v_title">Evolutionary relationships among large double-stranded DNA viruses that infect microalgae and other organisms as inferred from DNA polymerase genes.</data>
+      <data key="v_citations">61</data>
+      <data key="v_year">1996</data>
+      <data key="v_name">8623526_MED</data>
+      <data key="v_color">#3f7f59</data>
+      <data key="v_clusterK">4</data>
+    </node>
+    <node id="n107">
+      <data key="v_label">Oren et al. (1997)</data>
+      <data key="v_size">64</data>
+      <data key="v_title">Occurrence of virus-like particles in the Dead Sea.</data>
+      <data key="v_citations">64</data>
+      <data key="v_year">1997</data>
+      <data key="v_name">9680320_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n108">
+      <data key="v_label">Tilman et al. (2001)</data>
+      <data key="v_size">437</data>
+      <data key="v_title">Diversity and productivity in a long-term grassland experiment.</data>
+      <data key="v_citations">437</data>
+      <data key="v_year">2001</data>
+      <data key="v_name">11679667_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n109">
+      <data key="v_label">Cardinale et al. (2002)</data>
+      <data key="v_size">170</data>
+      <data key="v_title">Species diversity enhances ecosystem functioning through interspecific facilitation.</data>
+      <data key="v_citations">170</data>
+      <data key="v_year">2002</data>
+      <data key="v_name">11807553_MED</data>
+      <data key="v_color">#723f7f</data>
+      <data key="v_clusterK">8</data>
+    </node>
+    <node id="n110">
+      <data key="v_label">Hofnung et al. (1976)</data>
+      <data key="v_size">65</data>
+      <data key="v_title">lamB mutations in E. coli K12: growth of lambda host range mutants and effect of nonsense suppressors.</data>
+      <data key="v_citations">65</data>
+      <data key="v_year">1976</data>
+      <data key="v_name">778586_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n111">
+      <data key="v_label">Wills and Condit (1999)</data>
+      <data key="v_size">21</data>
+      <data key="v_title">Similar non-random processes maintain diversity in two tropical rainforests.</data>
+      <data key="v_citations">21</data>
+      <data key="v_year">1999</data>
+      <data key="v_name">10457617_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n112">
+      <data key="v_label">Wills et al. (1997)</data>
+      <data key="v_size">79</data>
+      <data key="v_title">Strong density- and diversity-related effects help to maintain tree species diversity in a neotropical forest.</data>
+      <data key="v_citations">79</data>
+      <data key="v_year">1997</data>
+      <data key="v_name">11038601_MED</data>
+      <data key="v_color">#723f7f</data>
+      <data key="v_clusterK">8</data>
+    </node>
+    <edge source="n0" target="n16">
+    </edge>
+    <edge source="n1" target="n17">
+    </edge>
+    <edge source="n1" target="n18">
+    </edge>
+    <edge source="n2" target="n17">
+    </edge>
+    <edge source="n2" target="n21">
+    </edge>
+    <edge source="n3" target="n17">
+    </edge>
+    <edge source="n3" target="n21">
+    </edge>
+    <edge source="n4" target="n17">
+    </edge>
+    <edge source="n4" target="n21">
+    </edge>
+    <edge source="n5" target="n17">
+    </edge>
+    <edge source="n5" target="n21">
+    </edge>
+    <edge source="n6" target="n17">
+    </edge>
+    <edge source="n6" target="n21">
+    </edge>
+    <edge source="n7" target="n10">
+    </edge>
+    <edge source="n7" target="n21">
+    </edge>
+    <edge source="n7" target="n27">
+    </edge>
+    <edge source="n8" target="n10">
+    </edge>
+    <edge source="n8" target="n21">
+    </edge>
+    <edge source="n8" target="n27">
+    </edge>
+    <edge source="n9" target="n17">
+    </edge>
+    <edge source="n9" target="n18">
+    </edge>
+    <edge source="n9" target="n21">
+    </edge>
+    <edge source="n10" target="n11">
+    </edge>
+    <edge source="n10" target="n12">
+    </edge>
+    <edge source="n10" target="n13">
+    </edge>
+    <edge source="n10" target="n14">
+    </edge>
+    <edge source="n10" target="n15">
+    </edge>
+    <edge source="n10" target="n16">
+    </edge>
+    <edge source="n10" target="n17">
+    </edge>
+    <edge source="n10" target="n18">
+    </edge>
+    <edge source="n10" target="n20">
+    </edge>
+    <edge source="n10" target="n21">
+    </edge>
+    <edge source="n10" target="n28">
+    </edge>
+    <edge source="n10" target="n29">
+    </edge>
+    <edge source="n10" target="n30">
+    </edge>
+    <edge source="n10" target="n31">
+    </edge>
+    <edge source="n10" target="n32">
+    </edge>
+    <edge source="n10" target="n33">
+    </edge>
+    <edge source="n10" target="n37">
+    </edge>
+    <edge source="n10" target="n39">
+    </edge>
+    <edge source="n10" target="n40">
+    </edge>
+    <edge source="n10" target="n41">
+    </edge>
+    <edge source="n10" target="n42">
+    </edge>
+    <edge source="n10" target="n47">
+    </edge>
+    <edge source="n10" target="n48">
+    </edge>
+    <edge source="n10" target="n49">
+    </edge>
+    <edge source="n10" target="n51">
+    </edge>
+    <edge source="n10" target="n52">
+    </edge>
+    <edge source="n10" target="n53">
+    </edge>
+    <edge source="n10" target="n54">
+    </edge>
+    <edge source="n10" target="n55">
+    </edge>
+    <edge source="n10" target="n58">
+    </edge>
+    <edge source="n10" target="n60">
+    </edge>
+    <edge source="n10" target="n61">
+    </edge>
+    <edge source="n10" target="n62">
+    </edge>
+    <edge source="n10" target="n81">
+    </edge>
+    <edge source="n10" target="n82">
+    </edge>
+    <edge source="n10" target="n83">
+    </edge>
+    <edge source="n10" target="n86">
+    </edge>
+    <edge source="n10" target="n89">
+    </edge>
+    <edge source="n10" target="n90">
+    </edge>
+    <edge source="n10" target="n91">
+    </edge>
+    <edge source="n10" target="n92">
+    </edge>
+    <edge source="n10" target="n93">
+    </edge>
+    <edge source="n10" target="n97">
+    </edge>
+    <edge source="n10" target="n98">
+    </edge>
+    <edge source="n10" target="n99">
+    </edge>
+    <edge source="n10" target="n100">
+    </edge>
+    <edge source="n10" target="n102">
+    </edge>
+    <edge source="n10" target="n103">
+    </edge>
+    <edge source="n10" target="n104">
+    </edge>
+    <edge source="n10" target="n106">
+    </edge>
+    <edge source="n10" target="n107">
+    </edge>
+    <edge source="n11" target="n17">
+    </edge>
+    <edge source="n11" target="n21">
+    </edge>
+    <edge source="n12" target="n21">
+    </edge>
+    <edge source="n13" target="n17">
+    </edge>
+    <edge source="n13" target="n21">
+    </edge>
+    <edge source="n14" target="n21">
+    </edge>
+    <edge source="n15" target="n17">
+    </edge>
+    <edge source="n16" target="n17">
+    </edge>
+    <edge source="n16" target="n18">
+    </edge>
+    <edge source="n16" target="n21">
+    </edge>
+    <edge source="n16" target="n27">
+    </edge>
+    <edge source="n16" target="n35">
+    </edge>
+    <edge source="n16" target="n44">
+    </edge>
+    <edge source="n16" target="n45">
+    </edge>
+    <edge source="n16" target="n48">
+    </edge>
+    <edge source="n16" target="n59">
+    </edge>
+    <edge source="n16" target="n63">
+    </edge>
+    <edge source="n16" target="n64">
+    </edge>
+    <edge source="n16" target="n65">
+    </edge>
+    <edge source="n16" target="n66">
+    </edge>
+    <edge source="n16" target="n67">
+    </edge>
+    <edge source="n16" target="n68">
+    </edge>
+    <edge source="n16" target="n69">
+    </edge>
+    <edge source="n16" target="n70">
+    </edge>
+    <edge source="n16" target="n71">
+    </edge>
+    <edge source="n16" target="n72">
+    </edge>
+    <edge source="n16" target="n73">
+    </edge>
+    <edge source="n16" target="n74">
+    </edge>
+    <edge source="n16" target="n75">
+    </edge>
+    <edge source="n17" target="n18">
+    </edge>
+    <edge source="n17" target="n19">
+    </edge>
+    <edge source="n17" target="n20">
+    </edge>
+    <edge source="n17" target="n22">
+    </edge>
+    <edge source="n17" target="n23">
+    </edge>
+    <edge source="n17" target="n24">
+    </edge>
+    <edge source="n17" target="n25">
+    </edge>
+    <edge source="n17" target="n26">
+    </edge>
+    <edge source="n17" target="n34">
+    </edge>
+    <edge source="n17" target="n38">
+    </edge>
+    <edge source="n17" target="n41">
+    </edge>
+    <edge source="n17" target="n43">
+    </edge>
+    <edge source="n17" target="n46">
+    </edge>
+    <edge source="n17" target="n47">
+    </edge>
+    <edge source="n17" target="n48">
+    </edge>
+    <edge source="n17" target="n49">
+    </edge>
+    <edge source="n17" target="n50">
+    </edge>
+    <edge source="n17" target="n54">
+    </edge>
+    <edge source="n17" target="n57">
+    </edge>
+    <edge source="n17" target="n62">
+    </edge>
+    <edge source="n17" target="n68">
+    </edge>
+    <edge source="n17" target="n81">
+    </edge>
+    <edge source="n17" target="n82">
+    </edge>
+    <edge source="n17" target="n85">
+    </edge>
+    <edge source="n17" target="n87">
+    </edge>
+    <edge source="n17" target="n89">
+    </edge>
+    <edge source="n17" target="n90">
+    </edge>
+    <edge source="n17" target="n91">
+    </edge>
+    <edge source="n17" target="n92">
+    </edge>
+    <edge source="n17" target="n93">
+    </edge>
+    <edge source="n17" target="n94">
+    </edge>
+    <edge source="n17" target="n95">
+    </edge>
+    <edge source="n17" target="n98">
+    </edge>
+    <edge source="n17" target="n99">
+    </edge>
+    <edge source="n17" target="n104">
+    </edge>
+    <edge source="n17" target="n105">
+    </edge>
+    <edge source="n17" target="n106">
+    </edge>
+    <edge source="n17" target="n107">
+    </edge>
+    <edge source="n18" target="n19">
+    </edge>
+    <edge source="n18" target="n33">
+    </edge>
+    <edge source="n18" target="n39">
+    </edge>
+    <edge source="n18" target="n42">
+    </edge>
+    <edge source="n18" target="n48">
+    </edge>
+    <edge source="n18" target="n50">
+    </edge>
+    <edge source="n18" target="n54">
+    </edge>
+    <edge source="n18" target="n55">
+    </edge>
+    <edge source="n18" target="n94">
+    </edge>
+    <edge source="n18" target="n95">
+    </edge>
+    <edge source="n18" target="n97">
+    </edge>
+    <edge source="n21" target="n22">
+    </edge>
+    <edge source="n21" target="n23">
+    </edge>
+    <edge source="n21" target="n24">
+    </edge>
+    <edge source="n21" target="n25">
+    </edge>
+    <edge source="n21" target="n26">
+    </edge>
+    <edge source="n21" target="n28">
+    </edge>
+    <edge source="n21" target="n29">
+    </edge>
+    <edge source="n21" target="n30">
+    </edge>
+    <edge source="n21" target="n31">
+    </edge>
+    <edge source="n21" target="n32">
+    </edge>
+    <edge source="n21" target="n34">
+    </edge>
+    <edge source="n21" target="n37">
+    </edge>
+    <edge source="n21" target="n38">
+    </edge>
+    <edge source="n21" target="n40">
+    </edge>
+    <edge source="n21" target="n43">
+    </edge>
+    <edge source="n21" target="n46">
+    </edge>
+    <edge source="n21" target="n48">
+    </edge>
+    <edge source="n21" target="n51">
+    </edge>
+    <edge source="n21" target="n57">
+    </edge>
+    <edge source="n21" target="n59">
+    </edge>
+    <edge source="n21" target="n67">
+    </edge>
+    <edge source="n21" target="n68">
+    </edge>
+    <edge source="n21" target="n82">
+    </edge>
+    <edge source="n21" target="n83">
+    </edge>
+    <edge source="n21" target="n85">
+    </edge>
+    <edge source="n21" target="n86">
+    </edge>
+    <edge source="n21" target="n100">
+    </edge>
+    <edge source="n21" target="n102">
+    </edge>
+    <edge source="n21" target="n103">
+    </edge>
+    <edge source="n27" target="n32">
+    </edge>
+    <edge source="n27" target="n84">
+    </edge>
+    <edge source="n27" target="n87">
+    </edge>
+    <edge source="n35" target="n36">
+    </edge>
+    <edge source="n35" target="n45">
+    </edge>
+    <edge source="n35" target="n63">
+    </edge>
+    <edge source="n35" target="n70">
+    </edge>
+    <edge source="n35" target="n72">
+    </edge>
+    <edge source="n35" target="n74">
+    </edge>
+    <edge source="n35" target="n75">
+    </edge>
+    <edge source="n35" target="n76">
+    </edge>
+    <edge source="n35" target="n77">
+    </edge>
+    <edge source="n35" target="n78">
+    </edge>
+    <edge source="n35" target="n79">
+    </edge>
+    <edge source="n35" target="n80">
+    </edge>
+    <edge source="n36" target="n70">
+    </edge>
+    <edge source="n36" target="n74">
+    </edge>
+    <edge source="n37" target="n59">
+    </edge>
+    <edge source="n38" target="n59">
+    </edge>
+    <edge source="n44" target="n108">
+    </edge>
+    <edge source="n44" target="n109">
+    </edge>
+    <edge source="n45" target="n75">
+    </edge>
+    <edge source="n45" target="n78">
+    </edge>
+    <edge source="n45" target="n79">
+    </edge>
+    <edge source="n45" target="n96">
+    </edge>
+    <edge source="n52" target="n59">
+    </edge>
+    <edge source="n53" target="n59">
+    </edge>
+    <edge source="n56" target="n71">
+    </edge>
+    <edge source="n56" target="n72">
+    </edge>
+    <edge source="n58" target="n59">
+    </edge>
+    <edge source="n59" target="n60">
+    </edge>
+    <edge source="n59" target="n61">
+    </edge>
+    <edge source="n59" target="n105">
+    </edge>
+    <edge source="n63" target="n71">
+    </edge>
+    <edge source="n63" target="n74">
+    </edge>
+    <edge source="n63" target="n75">
+    </edge>
+    <edge source="n63" target="n88">
+    </edge>
+    <edge source="n63" target="n89">
+    </edge>
+    <edge source="n63" target="n110">
+    </edge>
+    <edge source="n64" target="n65">
+    </edge>
+    <edge source="n64" target="n101">
+    </edge>
+    <edge source="n64" target="n111">
+    </edge>
+    <edge source="n64" target="n112">
+    </edge>
+    <edge source="n65" target="n76">
+    </edge>
+    <edge source="n65" target="n101">
+    </edge>
+    <edge source="n65" target="n111">
+    </edge>
+    <edge source="n65" target="n112">
+    </edge>
+    <edge source="n70" target="n75">
+    </edge>
+    <edge source="n70" target="n80">
+    </edge>
+    <edge source="n70" target="n88">
+    </edge>
+    <edge source="n70" target="n110">
+    </edge>
+    <edge source="n71" target="n72">
+    </edge>
+    <edge source="n71" target="n74">
+    </edge>
+    <edge source="n71" target="n75">
+    </edge>
+    <edge source="n72" target="n75">
+    </edge>
+    <edge source="n72" target="n84">
+    </edge>
+    <edge source="n72" target="n96">
+    </edge>
+    <edge source="n73" target="n108">
+    </edge>
+    <edge source="n73" target="n109">
+    </edge>
+    <edge source="n74" target="n75">
+    </edge>
+    <edge source="n74" target="n76">
+    </edge>
+    <edge source="n74" target="n77">
+    </edge>
+    <edge source="n74" target="n80">
+    </edge>
+    <edge source="n74" target="n96">
+    </edge>
+  </graph>
+</graphml>

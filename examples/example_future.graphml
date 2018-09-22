@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<!-- Created by igraph -->
+  <key id="v_label" for="node" attr.name="label" attr.type="string"/>
+  <key id="v_size" for="node" attr.name="size" attr.type="double"/>
+  <key id="v_title" for="node" attr.name="title" attr.type="string"/>
+  <key id="v_citations" for="node" attr.name="citations" attr.type="double"/>
+  <key id="v_year" for="node" attr.name="year" attr.type="double"/>
+  <key id="v_name" for="node" attr.name="name" attr.type="string"/>
+  <key id="v_color" for="node" attr.name="color" attr.type="string"/>
+  <key id="v_clusterK" for="node" attr.name="clusterK" attr.type="double"/>
+  <graph id="G" edgedefault="undirected">
+    <node id="n0">
+      <data key="v_label">Brockhurst et al. (2007)</data>
+      <data key="v_size">52</data>
+      <data key="v_title">Experimental coevolution with bacteria and phage. The Pseudomonas fluorescens--Phi2 model system.</data>
+      <data key="v_citations">52</data>
+      <data key="v_year">2007</data>
+      <data key="v_name">17320489_MED</data>
+      <data key="v_color">#7f663f</data>
+      <data key="v_clusterK">1</data>
+    </node>
+    <node id="n1">
+      <data key="v_label">Brockhurst et al. (2006)</data>
+      <data key="v_size">18</data>
+      <data key="v_title">The impact of phages on interspecific competition in experimental populations of bacteria.</data>
+      <data key="v_citations">18</data>
+      <data key="v_year">2006</data>
+      <data key="v_name">17166259_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n2">
+      <data key="v_label">Jousset et al. (2017)</data>
+      <data key="v_size">33</data>
+      <data key="v_title">Where less may be more: how the rare biosphere pulls ecosystems strings.</data>
+      <data key="v_citations">33</data>
+      <data key="v_year">2017</data>
+      <data key="v_name">28072420_MED</data>
+      <data key="v_color">#723f7f</data>
+      <data key="v_clusterK">8</data>
+    </node>
+    <node id="n3">
+      <data key="v_label">Winter et al. (2010)</data>
+      <data key="v_size">91</data>
+      <data key="v_title">Trade-offs between competition and defense specialists among unicellular planktonic organisms: the &quot;killing the winner&quot; hypothesis revisited.</data>
+      <data key="v_citations">91</data>
+      <data key="v_year">2010</data>
+      <data key="v_name">20197498_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n4">
+      <data key="v_label">Heath et al. (2017)</data>
+      <data key="v_size">2</data>
+      <data key="v_title">Virus Resistance Is Not Costly in a Marine Alga Evolving under Multiple Environmental Stressors.</data>
+      <data key="v_citations">2</data>
+      <data key="v_year">2017</data>
+      <data key="v_name">28282867_MED</data>
+      <data key="v_color">#3f7f59</data>
+      <data key="v_clusterK">4</data>
+    </node>
+    <node id="n5">
+      <data key="v_label">De et al. (2017)</data>
+      <data key="v_size">7</data>
+      <data key="v_title">Pseudomonas predators: understanding and exploiting phage-host interactions.</data>
+      <data key="v_citations">7</data>
+      <data key="v_year">2017</data>
+      <data key="v_name">28649138_MED</data>
+      <data key="v_color">#7f663f</data>
+      <data key="v_clusterK">1</data>
+    </node>
+    <node id="n6">
+      <data key="v_label">Dang et al. (2015)</data>
+      <data key="v_size">5</data>
+      <data key="v_title">Variably lytic infection dynamics of large Bacteroidetes podovirus phi38:1 against two Cellulophaga baltica host strains.</data>
+      <data key="v_citations">5</data>
+      <data key="v_year">2015</data>
+      <data key="v_name">26248067_MED</data>
+      <data key="v_color">#3f597f</data>
+      <data key="v_clusterK">6</data>
+    </node>
+    <node id="n7">
+      <data key="v_label">Kang et al. (2013)</data>
+      <data key="v_size">45</data>
+      <data key="v_title">Genome of a SAR116 bacteriophage shows the prevalence of this phage type in the oceans.</data>
+      <data key="v_citations">45</data>
+      <data key="v_year">2013</data>
+      <data key="v_name">23798439_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n8">
+      <data key="v_label">Breitbart (2012)</data>
+      <data key="v_size">110</data>
+      <data key="v_title">Marine viruses: truth or dare.</data>
+      <data key="v_citations">110</data>
+      <data key="v_year">2012</data>
+      <data key="v_name">22457982_MED</data>
+      <data key="v_color">#3f7f59</data>
+      <data key="v_clusterK">4</data>
+    </node>
+    <node id="n9">
+      <data key="v_label">Clokie et al. (2011)</data>
+      <data key="v_size">133</data>
+      <data key="v_title">Phages in nature.</data>
+      <data key="v_citations">133</data>
+      <data key="v_year">2011</data>
+      <data key="v_name">21687533_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n10">
+      <data key="v_label">Mizuno et al. (2013)</data>
+      <data key="v_size">76</data>
+      <data key="v_title">Expanding the marine virosphere using metagenomics.</data>
+      <data key="v_citations">76</data>
+      <data key="v_year">2013</data>
+      <data key="v_name">24348267_MED</data>
+      <data key="v_color">#3f7f59</data>
+      <data key="v_clusterK">4</data>
+    </node>
+    <node id="n11">
+      <data key="v_label">Avrani and Lindell (2015)</data>
+      <data key="v_size">17</data>
+      <data key="v_title">Convergent evolution toward an improved growth rate and a reduced resistance range in Prochlorococcus strains resistant to phage.</data>
+      <data key="v_citations">17</data>
+      <data key="v_year">2015</data>
+      <data key="v_name">25922520_MED</data>
+      <data key="v_color">#3f597f</data>
+      <data key="v_clusterK">6</data>
+    </node>
+    <node id="n12">
+      <data key="v_label">Våge et al. (2014)</data>
+      <data key="v_size">6</data>
+      <data key="v_title">Optimal defense strategies in an idealized microbial food web under trade-off between competition and defense.</data>
+      <data key="v_citations">6</data>
+      <data key="v_year">2014</data>
+      <data key="v_name">24999739_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n13">
+      <data key="v_label">Haro-Moreno et al. (2017)</data>
+      <data key="v_size">7</data>
+      <data key="v_title">New insights into marine group III Euryarchaeota, from dark to light.</data>
+      <data key="v_citations">7</data>
+      <data key="v_year">2017</data>
+      <data key="v_name">28085158_MED</data>
+      <data key="v_color">#7f3f65</data>
+      <data key="v_clusterK">9</data>
+    </node>
+    <node id="n14">
+      <data key="v_label">Martin-Cuadrado et al. (2015)</data>
+      <data key="v_size">20</data>
+      <data key="v_title">A new class of marine Euryarchaeota group II from the Mediterranean deep chlorophyll maximum.</data>
+      <data key="v_citations">20</data>
+      <data key="v_year">2015</data>
+      <data key="v_name">25535935_MED</data>
+      <data key="v_color">#7f3f65</data>
+      <data key="v_clusterK">9</data>
+    </node>
+    <node id="n15">
+      <data key="v_label">Flores et al. (2013)</data>
+      <data key="v_size">39</data>
+      <data key="v_title">Multi-scale structure and geographic drivers of cross-infection within marine bacteria and phages.</data>
+      <data key="v_citations">39</data>
+      <data key="v_year">2013</data>
+      <data key="v_name">23178671_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n16">
+      <data key="v_label">Ghai et al. (2011)</data>
+      <data key="v_size">87</data>
+      <data key="v_title">New abundant microbial groups in aquatic hypersaline environments.</data>
+      <data key="v_citations">87</data>
+      <data key="v_year">2011</data>
+      <data key="v_name">22355652_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n17">
+      <data key="v_label">Ghai et al. (2010)</data>
+      <data key="v_size">66</data>
+      <data key="v_title">Metagenome of the Mediterranean deep chlorophyll maximum studied by direct and fosmid library 454 pyrosequencing.</data>
+      <data key="v_citations">66</data>
+      <data key="v_year">2010</data>
+      <data key="v_name">20393571_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n18">
+      <data key="v_label">Rodriguez-Valera et al. (2009)</data>
+      <data key="v_size">219</data>
+      <data key="v_title">Explaining microbial population genomics through phage predation.</data>
+      <data key="v_citations">219</data>
+      <data key="v_year">2009</data>
+      <data key="v_name">19834481_MED</data>
+      <data key="v_color">#4c7f3f</data>
+      <data key="v_clusterK">3</data>
+    </node>
+    <node id="n19">
+      <data key="v_label">Chandler et al. (2016)</data>
+      <data key="v_size">5</data>
+      <data key="v_title">Variable but persistent coexistence of Prochlorococcus ecotypes along temperature gradients in the ocean&apos;s surface mixed layer.</data>
+      <data key="v_citations">5</data>
+      <data key="v_year">2016</data>
+      <data key="v_name">26743532_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n20">
+      <data key="v_label">Lynch and Neufeld (2015)</data>
+      <data key="v_size">126</data>
+      <data key="v_title">Ecology and exploration of the rare biosphere.</data>
+      <data key="v_citations">126</data>
+      <data key="v_year">2015</data>
+      <data key="v_name">25730701_MED</data>
+      <data key="v_color">#723f7f</data>
+      <data key="v_clusterK">8</data>
+    </node>
+    <node id="n21">
+      <data key="v_label">Rodriguez-Valera et al. (2014)</data>
+      <data key="v_size">10</data>
+      <data key="v_title">Tales from a thousand and one phages.</data>
+      <data key="v_citations">10</data>
+      <data key="v_year">2014</data>
+      <data key="v_name">24616837_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n22">
+      <data key="v_label">Gonzaga et al. (2012)</data>
+      <data key="v_size">24</data>
+      <data key="v_title">Polyclonality of concurrent natural populations of Alteromonas macleodii.</data>
+      <data key="v_citations">24</data>
+      <data key="v_year">2012</data>
+      <data key="v_name">23212172_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n23">
+      <data key="v_label">Cabello-Yeves et al. (2017)</data>
+      <data key="v_size">6</data>
+      <data key="v_title">Novel Synechococcus Genomes Reconstructed from Freshwater Reservoirs.</data>
+      <data key="v_citations">6</data>
+      <data key="v_year">2017</data>
+      <data key="v_name">28680419_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n24">
+      <data key="v_label">Ogilvie and Jones (2015)</data>
+      <data key="v_size">48</data>
+      <data key="v_title">The human gut virome: a multifaceted majority.</data>
+      <data key="v_citations">48</data>
+      <data key="v_year">2015</data>
+      <data key="v_name">26441861_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n25">
+      <data key="v_label">Berg et al. (2012)</data>
+      <data key="v_size">41</data>
+      <data key="v_title">Phage-bacteria relationships and CRISPR elements revealed by a metagenomic survey of the rumen microbiome.</data>
+      <data key="v_citations">41</data>
+      <data key="v_year">2012</data>
+      <data key="v_name">22004549_MED</data>
+      <data key="v_color">#4c7f3f</data>
+      <data key="v_clusterK">3</data>
+    </node>
+    <node id="n26">
+      <data key="v_label">Cordero and Polz (2014)</data>
+      <data key="v_size">94</data>
+      <data key="v_title">Explaining microbial genomic diversity in light of evolutionary ecology.</data>
+      <data key="v_citations">94</data>
+      <data key="v_year">2014</data>
+      <data key="v_name">24590245_MED</data>
+      <data key="v_color">#7f3f65</data>
+      <data key="v_clusterK">9</data>
+    </node>
+    <node id="n27">
+      <data key="v_label">Martiny et al. (2014)</data>
+      <data key="v_size">17</data>
+      <data key="v_title">Antagonistic coevolution of marine planktonic viruses and their hosts.</data>
+      <data key="v_citations">17</data>
+      <data key="v_year">2014</data>
+      <data key="v_name">23987913_MED</data>
+      <data key="v_color">#3f7f59</data>
+      <data key="v_clusterK">4</data>
+    </node>
+    <node id="n28">
+      <data key="v_label">López-Pérez et al. (2017)</data>
+      <data key="v_size">2</data>
+      <data key="v_title">Genome diversity of marine phages recovered from Mediterranean metagenomes: Size matters.</data>
+      <data key="v_citations">2</data>
+      <data key="v_year">2017</data>
+      <data key="v_name">28945750_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n29">
+      <data key="v_label">Mizuno et al. (2014)</data>
+      <data key="v_size">8</data>
+      <data key="v_title">Evidence for metaviromic islands in marine phages.</data>
+      <data key="v_citations">8</data>
+      <data key="v_year">2014</data>
+      <data key="v_name">24550898_MED</data>
+      <data key="v_color">#3f7f59</data>
+      <data key="v_clusterK">4</data>
+    </node>
+    <node id="n30">
+      <data key="v_label">Troussellier et al. (2017)</data>
+      <data key="v_size">2</data>
+      <data key="v_title">Sustaining Rare Marine Microorganisms: Macroorganisms As Repositories and Dispersal Agents of Microbial Diversity.</data>
+      <data key="v_citations">2</data>
+      <data key="v_year">2017</data>
+      <data key="v_name">28611749_MED</data>
+      <data key="v_color">#723f7f</data>
+      <data key="v_clusterK">8</data>
+    </node>
+    <node id="n31">
+      <data key="v_label">Kirchman (2016)</data>
+      <data key="v_size">17</data>
+      <data key="v_title">Growth Rates of Microbes in the Oceans.</data>
+      <data key="v_citations">17</data>
+      <data key="v_year">2016</data>
+      <data key="v_name">26195108_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n32">
+      <data key="v_label">Oliveira et al. (2017)</data>
+      <data key="v_size">3</data>
+      <data key="v_title">Ability of phages to infect Acinetobacter calcoaceticus-Acinetobacter baumannii complex species through acquisition of different pectate lyase depolymerase domains.</data>
+      <data key="v_citations">3</data>
+      <data key="v_year">2017</data>
+      <data key="v_name">29076652_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n33">
+      <data key="v_label">Scanlan (2017)</data>
+      <data key="v_size">6</data>
+      <data key="v_title">Bacteria-Bacteriophage Coevolution in the Human Gut: Implications for Microbial Diversity and Functionality.</data>
+      <data key="v_citations">6</data>
+      <data key="v_year">2017</data>
+      <data key="v_name">28342597_MED</data>
+      <data key="v_color">#7f663f</data>
+      <data key="v_clusterK">1</data>
+    </node>
+    <node id="n34">
+      <data key="v_label">Koskella and Brockhurst (2014)</data>
+      <data key="v_size">88</data>
+      <data key="v_title">Bacteria-phage coevolution as a driver of ecological and evolutionary processes in microbial communities.</data>
+      <data key="v_citations">88</data>
+      <data key="v_year">2014</data>
+      <data key="v_name">24617569_MED</data>
+      <data key="v_color">#7f663f</data>
+      <data key="v_clusterK">1</data>
+    </node>
+    <node id="n35">
+      <data key="v_label">Schwartz and Lindell (2017)</data>
+      <data key="v_size">3</data>
+      <data key="v_title">Genetic hurdles limit the arms race between Prochlorococcus and the T7-like podoviruses infecting them.</data>
+      <data key="v_citations">3</data>
+      <data key="v_year">2017</data>
+      <data key="v_name">28440802_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n36">
+      <data key="v_label">Nakamura et al. (2014)</data>
+      <data key="v_size">4</data>
+      <data key="v_title">Genetic diversity of Microcystis cyanophages in two different freshwater environments.</data>
+      <data key="v_citations">4</data>
+      <data key="v_year">2014</data>
+      <data key="v_name">24671440_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n37">
+      <data key="v_label">Zhao et al. (2013)</data>
+      <data key="v_size">112</data>
+      <data key="v_title">Abundant SAR11 viruses in the ocean.</data>
+      <data key="v_citations">112</data>
+      <data key="v_year">2013</data>
+      <data key="v_name">23407494_MED</data>
+      <data key="v_color">#3f7f59</data>
+      <data key="v_clusterK">4</data>
+    </node>
+    <node id="n38">
+      <data key="v_label">Hargreaves et al. (2013)</data>
+      <data key="v_size">7</data>
+      <data key="v_title">Recovery of viable cyanophages from the sediments of a eutrophic lake at decadal timescales.</data>
+      <data key="v_citations">7</data>
+      <data key="v_year">2013</data>
+      <data key="v_name">22963199_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n39">
+      <data key="v_label">Bautista et al. (2015)</data>
+      <data key="v_size">6</data>
+      <data key="v_title">Virus-induced dormancy in the archaeon Sulfolobus islandicus.</data>
+      <data key="v_citations">6</data>
+      <data key="v_year">2015</data>
+      <data key="v_name">25827422_MED</data>
+      <data key="v_color">#4c7f3f</data>
+      <data key="v_clusterK">3</data>
+    </node>
+    <node id="n40">
+      <data key="v_label">Jover et al. (2013)</data>
+      <data key="v_size">29</data>
+      <data key="v_title">Mechanisms of multi-strain coexistence in host-phage systems with nested infection networks.</data>
+      <data key="v_citations">29</data>
+      <data key="v_year">2013</data>
+      <data key="v_name">23608631_MED</data>
+      <data key="v_color">#3f597f</data>
+      <data key="v_clusterK">6</data>
+    </node>
+    <node id="n41">
+      <data key="v_label">Held et al. (2010)</data>
+      <data key="v_size">42</data>
+      <data key="v_title">CRISPR associated diversity within a population of Sulfolobus islandicus.</data>
+      <data key="v_citations">42</data>
+      <data key="v_year">2010</data>
+      <data key="v_name">20927396_MED</data>
+      <data key="v_color">#4c7f3f</data>
+      <data key="v_clusterK">3</data>
+    </node>
+    <node id="n42">
+      <data key="v_label">Meaden et al. (2015)</data>
+      <data key="v_size">9</data>
+      <data key="v_title">The cost of phage resistance in a plant pathogenic bacterium is context-dependent.</data>
+      <data key="v_citations">9</data>
+      <data key="v_year">2015</data>
+      <data key="v_name">25809535_MED</data>
+      <data key="v_color">#7f663f</data>
+      <data key="v_clusterK">1</data>
+    </node>
+    <node id="n43">
+      <data key="v_label">Beckett and Williams (2013)</data>
+      <data key="v_size">14</data>
+      <data key="v_title">Coevolutionary diversification creates nested-modular structure in phage-bacteria interaction networks.</data>
+      <data key="v_citations">14</data>
+      <data key="v_year">2013</data>
+      <data key="v_name">24516719_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n44">
+      <data key="v_label">Ruiz et al. (2017)</data>
+      <data key="v_size">2</data>
+      <data key="v_title">Emerging Interaction Patterns in the Emiliania huxleyi-EhV System.</data>
+      <data key="v_citations">2</data>
+      <data key="v_year">2017</data>
+      <data key="v_name">28327527_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n45">
+      <data key="v_label">Avrani et al. (2012)</data>
+      <data key="v_size">19</data>
+      <data key="v_title">Virus-host swinging party in the oceans: Incorporating biological complexity into paradigms of antagonistic coexistence.</data>
+      <data key="v_citations">19</data>
+      <data key="v_year">2012</data>
+      <data key="v_name">22934242_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n46">
+      <data key="v_label">Kimura et al. (2013)</data>
+      <data key="v_size">11</data>
+      <data key="v_title">Rapid microcystis cyanophage gene diversification revealed by long- and short-term genetic analyses of the tail sheath gene in a natural pond.</data>
+      <data key="v_citations">11</data>
+      <data key="v_year">2013</data>
+      <data key="v_name">23417006_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n47">
+      <data key="v_label">Fernández et al. (2018)</data>
+      <data key="v_size">3</data>
+      <data key="v_title">Phage or foe: an insight into the impact of viral predation on microbial communities.</data>
+      <data key="v_citations">3</data>
+      <data key="v_year">2018</data>
+      <data key="v_name">29371652_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n48">
+      <data key="v_label">Ogilvie et al. (2012)</data>
+      <data key="v_size">22</data>
+      <data key="v_title">Comparative (meta)genomic analysis and ecological profiling of human gut-specific bacteriophage φB124-14.</data>
+      <data key="v_citations">22</data>
+      <data key="v_year">2012</data>
+      <data key="v_name">22558115_MED</data>
+      <data key="v_color">#4c3f7f</data>
+      <data key="v_clusterK">7</data>
+    </node>
+    <node id="n49">
+      <data key="v_label">Töpper et al. (2013)</data>
+      <data key="v_size">4</data>
+      <data key="v_title">Effects of differences in organic supply on bacterial diversity subject to viral lysis.</data>
+      <data key="v_citations">4</data>
+      <data key="v_year">2013</data>
+      <data key="v_name">22861500_MED</data>
+      <data key="v_color">#4c7f3f</data>
+      <data key="v_clusterK">3</data>
+    </node>
+    <node id="n50">
+      <data key="v_label">Morella et al. (2018)</data>
+      <data key="v_size">2</data>
+      <data key="v_title">The impact of bacteriophages on phyllosphere bacterial abundance and composition.</data>
+      <data key="v_citations">2</data>
+      <data key="v_year">2018</data>
+      <data key="v_name">29457297_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n51">
+      <data key="v_label">Cairns et al. (2017)</data>
+      <data key="v_size">6</data>
+      <data key="v_title">Sublethal streptomycin concentrations and lytic bacteriophage together promote resistance evolution.</data>
+      <data key="v_citations">6</data>
+      <data key="v_year">2017</data>
+      <data key="v_name">27920385_MED</data>
+      <data key="v_color">#3f597f</data>
+      <data key="v_clusterK">6</data>
+    </node>
+    <node id="n52">
+      <data key="v_label">Vage et al. (2013)</data>
+      <data key="v_size">23</data>
+      <data key="v_title">Adding a cost of resistance description extends the ability of virus-host model to explain observed patterns in structure and function of pelagic microbial communities.</data>
+      <data key="v_citations">23</data>
+      <data key="v_year">2013</data>
+      <data key="v_name">23331773_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n53">
+      <data key="v_label">Thingstad et al. (2014)</data>
+      <data key="v_size">35</data>
+      <data key="v_title">A theoretical analysis of how strain-specific viruses can control microbial species diversity.</data>
+      <data key="v_citations">35</data>
+      <data key="v_year">2014</data>
+      <data key="v_name">24825894_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n54">
+      <data key="v_label">Cairns et al. (2017)</data>
+      <data key="v_size">3</data>
+      <data key="v_title">Genomic evolution of bacterial populations under coselection by antibiotics and phage.</data>
+      <data key="v_citations">3</data>
+      <data key="v_year">2017</data>
+      <data key="v_name">27977892_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <node id="n55">
+      <data key="v_label">Manrique et al. (2016)</data>
+      <data key="v_size">57</data>
+      <data key="v_title">Healthy human gut phageome.</data>
+      <data key="v_citations">57</data>
+      <data key="v_year">2016</data>
+      <data key="v_name">27573828_MED</data>
+      <data key="v_color">#7f3f3f</data>
+      <data key="v_clusterK">0</data>
+    </node>
+    <node id="n56">
+      <data key="v_label">Betts et al. (2014)</data>
+      <data key="v_size">27</data>
+      <data key="v_title">Contrasted coevolutionary dynamics between a bacterial pathogen and its bacteriophages.</data>
+      <data key="v_citations">27</data>
+      <data key="v_year">2014</data>
+      <data key="v_name">25024215_MED</data>
+      <data key="v_color">#3f597f</data>
+      <data key="v_clusterK">6</data>
+    </node>
+    <node id="n57">
+      <data key="v_label">Fiegna et al. (2015)</data>
+      <data key="v_size">25</data>
+      <data key="v_title">Evolution of species interactions determines microbial community productivity in new environments.</data>
+      <data key="v_citations">25</data>
+      <data key="v_year">2015</data>
+      <data key="v_name">25387206_MED</data>
+      <data key="v_color">#727f3f</data>
+      <data key="v_clusterK">2</data>
+    </node>
+    <node id="n58">
+      <data key="v_label">Sunderland et al. (2017)</data>
+      <data key="v_size">11</data>
+      <data key="v_title">Phage-Enabled Nanomedicine: From Probes to Therapeutics in Precision Medicine.</data>
+      <data key="v_citations">11</data>
+      <data key="v_year">2017</data>
+      <data key="v_name">27491926_MED</data>
+      <data key="v_color">#7f663f</data>
+      <data key="v_clusterK">1</data>
+    </node>
+    <node id="n59">
+      <data key="v_label">Frickel et al. (2016)</data>
+      <data key="v_size">14</data>
+      <data key="v_title">Eco-evolutionary dynamics in a coevolving host-virus system.</data>
+      <data key="v_citations">14</data>
+      <data key="v_year">2016</data>
+      <data key="v_name">26898162_MED</data>
+      <data key="v_color">#3f597f</data>
+      <data key="v_clusterK">6</data>
+    </node>
+    <node id="n60">
+      <data key="v_label">Perry et al. (2015)</data>
+      <data key="v_size">9</data>
+      <data key="v_title">The Molecular and Genetic Basis of Repeatable Coevolution between Escherichia coli and Bacteriophage T3 in a Laboratory Microcosm.</data>
+      <data key="v_citations">9</data>
+      <data key="v_year">2015</data>
+      <data key="v_name">26114300_MED</data>
+      <data key="v_color">#7f663f</data>
+      <data key="v_clusterK">1</data>
+    </node>
+    <node id="n61">
+      <data key="v_label">Martin et al. (2017)</data>
+      <data key="v_size">5</data>
+      <data key="v_title">De novo evolved interference competition promotes the spread of biofilm defectors.</data>
+      <data key="v_citations">5</data>
+      <data key="v_year">2017</data>
+      <data key="v_name">28462927_MED</data>
+      <data key="v_color">#3f7f7f</data>
+      <data key="v_clusterK">5</data>
+    </node>
+    <edge source="n0" target="n1">
+    </edge>
+    <edge source="n0" target="n11">
+    </edge>
+    <edge source="n0" target="n27">
+    </edge>
+    <edge source="n0" target="n33">
+    </edge>
+    <edge source="n0" target="n34">
+    </edge>
+    <edge source="n0" target="n36">
+    </edge>
+    <edge source="n0" target="n39">
+    </edge>
+    <edge source="n0" target="n43">
+    </edge>
+    <edge source="n0" target="n51">
+    </edge>
+    <edge source="n0" target="n53">
+    </edge>
+    <edge source="n0" target="n54">
+    </edge>
+    <edge source="n0" target="n56">
+    </edge>
+    <edge source="n0" target="n60">
+    </edge>
+    <edge source="n1" target="n3">
+    </edge>
+    <edge source="n1" target="n5">
+    </edge>
+    <edge source="n1" target="n6">
+    </edge>
+    <edge source="n1" target="n17">
+    </edge>
+    <edge source="n1" target="n18">
+    </edge>
+    <edge source="n1" target="n20">
+    </edge>
+    <edge source="n1" target="n34">
+    </edge>
+    <edge source="n1" target="n38">
+    </edge>
+    <edge source="n1" target="n48">
+    </edge>
+    <edge source="n1" target="n57">
+    </edge>
+    <edge source="n1" target="n58">
+    </edge>
+    <edge source="n1" target="n59">
+    </edge>
+    <edge source="n1" target="n61">
+    </edge>
+    <edge source="n2" target="n3">
+    </edge>
+    <edge source="n2" target="n18">
+    </edge>
+    <edge source="n2" target="n20">
+    </edge>
+    <edge source="n3" target="n7">
+    </edge>
+    <edge source="n3" target="n8">
+    </edge>
+    <edge source="n3" target="n9">
+    </edge>
+    <edge source="n3" target="n12">
+    </edge>
+    <edge source="n3" target="n15">
+    </edge>
+    <edge source="n3" target="n18">
+    </edge>
+    <edge source="n3" target="n19">
+    </edge>
+    <edge source="n3" target="n20">
+    </edge>
+    <edge source="n3" target="n25">
+    </edge>
+    <edge source="n3" target="n26">
+    </edge>
+    <edge source="n3" target="n27">
+    </edge>
+    <edge source="n3" target="n30">
+    </edge>
+    <edge source="n3" target="n31">
+    </edge>
+    <edge source="n3" target="n34">
+    </edge>
+    <edge source="n3" target="n35">
+    </edge>
+    <edge source="n3" target="n39">
+    </edge>
+    <edge source="n3" target="n40">
+    </edge>
+    <edge source="n3" target="n41">
+    </edge>
+    <edge source="n3" target="n43">
+    </edge>
+    <edge source="n3" target="n44">
+    </edge>
+    <edge source="n3" target="n45">
+    </edge>
+    <edge source="n3" target="n46">
+    </edge>
+    <edge source="n3" target="n47">
+    </edge>
+    <edge source="n3" target="n49">
+    </edge>
+    <edge source="n3" target="n52">
+    </edge>
+    <edge source="n3" target="n53">
+    </edge>
+    <edge source="n4" target="n34">
+    </edge>
+    <edge source="n4" target="n59">
+    </edge>
+    <edge source="n5" target="n34">
+    </edge>
+    <edge source="n6" target="n34">
+    </edge>
+    <edge source="n7" target="n18">
+    </edge>
+    <edge source="n8" target="n18">
+    </edge>
+    <edge source="n9" target="n18">
+    </edge>
+    <edge source="n10" target="n17">
+    </edge>
+    <edge source="n10" target="n18">
+    </edge>
+    <edge source="n11" target="n18">
+    </edge>
+    <edge source="n11" target="n34">
+    </edge>
+    <edge source="n12" target="n18">
+    </edge>
+    <edge source="n13" target="n17">
+    </edge>
+    <edge source="n13" target="n18">
+    </edge>
+    <edge source="n14" target="n17">
+    </edge>
+    <edge source="n14" target="n18">
+    </edge>
+    <edge source="n15" target="n18">
+    </edge>
+    <edge source="n16" target="n17">
+    </edge>
+    <edge source="n16" target="n18">
+    </edge>
+    <edge source="n17" target="n18">
+    </edge>
+    <edge source="n17" target="n21">
+    </edge>
+    <edge source="n17" target="n22">
+    </edge>
+    <edge source="n17" target="n23">
+    </edge>
+    <edge source="n17" target="n28">
+    </edge>
+    <edge source="n17" target="n29">
+    </edge>
+    <edge source="n17" target="n37">
+    </edge>
+    <edge source="n18" target="n21">
+    </edge>
+    <edge source="n18" target="n22">
+    </edge>
+    <edge source="n18" target="n23">
+    </edge>
+    <edge source="n18" target="n25">
+    </edge>
+    <edge source="n18" target="n26">
+    </edge>
+    <edge source="n18" target="n28">
+    </edge>
+    <edge source="n18" target="n29">
+    </edge>
+    <edge source="n18" target="n32">
+    </edge>
+    <edge source="n18" target="n34">
+    </edge>
+    <edge source="n18" target="n35">
+    </edge>
+    <edge source="n18" target="n36">
+    </edge>
+    <edge source="n18" target="n37">
+    </edge>
+    <edge source="n18" target="n40">
+    </edge>
+    <edge source="n18" target="n41">
+    </edge>
+    <edge source="n18" target="n42">
+    </edge>
+    <edge source="n18" target="n43">
+    </edge>
+    <edge source="n18" target="n45">
+    </edge>
+    <edge source="n18" target="n46">
+    </edge>
+    <edge source="n18" target="n49">
+    </edge>
+    <edge source="n18" target="n50">
+    </edge>
+    <edge source="n18" target="n52">
+    </edge>
+    <edge source="n18" target="n53">
+    </edge>
+    <edge source="n18" target="n55">
+    </edge>
+    <edge source="n19" target="n20">
+    </edge>
+    <edge source="n20" target="n30">
+    </edge>
+    <edge source="n20" target="n31">
+    </edge>
+    <edge source="n24" target="n34">
+    </edge>
+    <edge source="n24" target="n48">
+    </edge>
+    <edge source="n32" target="n34">
+    </edge>
+    <edge source="n33" target="n34">
+    </edge>
+    <edge source="n34" target="n35">
+    </edge>
+    <edge source="n34" target="n39">
+    </edge>
+    <edge source="n34" target="n42">
+    </edge>
+    <edge source="n34" target="n47">
+    </edge>
+    <edge source="n34" target="n50">
+    </edge>
+    <edge source="n34" target="n51">
+    </edge>
+    <edge source="n34" target="n54">
+    </edge>
+    <edge source="n34" target="n56">
+    </edge>
+    <edge source="n34" target="n59">
+    </edge>
+    <edge source="n34" target="n60">
+    </edge>
+    <edge source="n36" target="n38">
+    </edge>
+    <edge source="n44" target="n59">
+    </edge>
+    <edge source="n48" target="n55">
+    </edge>
+  </graph>
+</graphml>

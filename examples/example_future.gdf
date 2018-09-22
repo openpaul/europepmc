@@ -1,0 +1,202 @@
+nodedef>name VARCHAR, label VARCHAR, size INTEGER, title VARCHAR, citations INTEGER, year INTEGER
+17320489_MED, Brockhurst et al. (2007), 52, Experimental coevolution with bacteria and phage. The Pseudomonas fluorescens--Phi2 model system., 52, 2007
+17166259_MED, Brockhurst et al. (2006), 18, The impact of phages on interspecific competition in experimental populations of bacteria., 18, 2006
+28072420_MED, Jousset et al. (2017), 33, Where less may be more: how the rare biosphere pulls ecosystems strings., 33, 2017
+20197498_MED, Winter et al. (2010), 91, Trade-offs between competition and defense specialists among unicellular planktonic organisms: the "killing the winner" hypothesis revisited., 91, 2010
+28282867_MED, Heath et al. (2017), 2, Virus Resistance Is Not Costly in a Marine Alga Evolving under Multiple Environmental Stressors., 2, 2017
+28649138_MED, De et al. (2017), 7, Pseudomonas predators: understanding and exploiting phage-host interactions., 7, 2017
+26248067_MED, Dang et al. (2015), 5, Variably lytic infection dynamics of large Bacteroidetes podovirus phi38:1 against two Cellulophaga baltica host strains., 5, 2015
+23798439_MED, Kang et al. (2013), 45, Genome of a SAR116 bacteriophage shows the prevalence of this phage type in the oceans., 45, 2013
+22457982_MED, Breitbart (2012), 110, Marine viruses: truth or dare., 110, 2012
+21687533_MED, Clokie et al. (2011), 133, Phages in nature., 133, 2011
+24348267_MED, Mizuno et al. (2013), 76, Expanding the marine virosphere using metagenomics., 76, 2013
+25922520_MED, Avrani and Lindell (2015), 17, Convergent evolution toward an improved growth rate and a reduced resistance range in Prochlorococcus strains resistant to phage., 17, 2015
+24999739_MED, Våge et al. (2014), 6, Optimal defense strategies in an idealized microbial food web under trade-off between competition and defense., 6, 2014
+28085158_MED, Haro-Moreno et al. (2017), 7, New insights into marine group III Euryarchaeota from dark to light., 7, 2017
+25535935_MED, Martin-Cuadrado et al. (2015), 20, A new class of marine Euryarchaeota group II from the Mediterranean deep chlorophyll maximum., 20, 2015
+23178671_MED, Flores et al. (2013), 39, Multi-scale structure and geographic drivers of cross-infection within marine bacteria and phages., 39, 2013
+22355652_MED, Ghai et al. (2011), 87, New abundant microbial groups in aquatic hypersaline environments., 87, 2011
+20393571_MED, Ghai et al. (2010), 66, Metagenome of the Mediterranean deep chlorophyll maximum studied by direct and fosmid library 454 pyrosequencing., 66, 2010
+19834481_MED, Rodriguez-Valera et al. (2009), 219, Explaining microbial population genomics through phage predation., 219, 2009
+26743532_MED, Chandler et al. (2016), 5, Variable but persistent coexistence of Prochlorococcus ecotypes along temperature gradients in the ocean's surface mixed layer., 5, 2016
+25730701_MED, Lynch and Neufeld (2015), 126, Ecology and exploration of the rare biosphere., 126, 2015
+24616837_MED, Rodriguez-Valera et al. (2014), 10, Tales from a thousand and one phages., 10, 2014
+23212172_MED, Gonzaga et al. (2012), 24, Polyclonality of concurrent natural populations of Alteromonas macleodii., 24, 2012
+28680419_MED, Cabello-Yeves et al. (2017), 6, Novel Synechococcus Genomes Reconstructed from Freshwater Reservoirs., 6, 2017
+26441861_MED, Ogilvie and Jones (2015), 48, The human gut virome: a multifaceted majority., 48, 2015
+22004549_MED, Berg et al. (2012), 41, Phage-bacteria relationships and CRISPR elements revealed by a metagenomic survey of the rumen microbiome., 41, 2012
+24590245_MED, Cordero and Polz (2014), 94, Explaining microbial genomic diversity in light of evolutionary ecology., 94, 2014
+23987913_MED, Martiny et al. (2014), 17, Antagonistic coevolution of marine planktonic viruses and their hosts., 17, 2014
+28945750_MED, López-Pérez et al. (2017), 2, Genome diversity of marine phages recovered from Mediterranean metagenomes: Size matters., 2, 2017
+24550898_MED, Mizuno et al. (2014), 8, Evidence for metaviromic islands in marine phages., 8, 2014
+28611749_MED, Troussellier et al. (2017), 2, Sustaining Rare Marine Microorganisms: Macroorganisms As Repositories and Dispersal Agents of Microbial Diversity., 2, 2017
+26195108_MED, Kirchman (2016), 17, Growth Rates of Microbes in the Oceans., 17, 2016
+29076652_MED, Oliveira et al. (2017), 3, Ability of phages to infect Acinetobacter calcoaceticus-Acinetobacter baumannii complex species through acquisition of different pectate lyase depolymerase domains., 3, 2017
+28342597_MED, Scanlan (2017), 6, Bacteria-Bacteriophage Coevolution in the Human Gut: Implications for Microbial Diversity and Functionality., 6, 2017
+24617569_MED, Koskella and Brockhurst (2014), 88, Bacteria-phage coevolution as a driver of ecological and evolutionary processes in microbial communities., 88, 2014
+28440802_MED, Schwartz and Lindell (2017), 3, Genetic hurdles limit the arms race between Prochlorococcus and the T7-like podoviruses infecting them., 3, 2017
+24671440_MED, Nakamura et al. (2014), 4, Genetic diversity of Microcystis cyanophages in two different freshwater environments., 4, 2014
+23407494_MED, Zhao et al. (2013), 112, Abundant SAR11 viruses in the ocean., 112, 2013
+22963199_MED, Hargreaves et al. (2013), 7, Recovery of viable cyanophages from the sediments of a eutrophic lake at decadal timescales., 7, 2013
+25827422_MED, Bautista et al. (2015), 6, Virus-induced dormancy in the archaeon Sulfolobus islandicus., 6, 2015
+23608631_MED, Jover et al. (2013), 29, Mechanisms of multi-strain coexistence in host-phage systems with nested infection networks., 29, 2013
+20927396_MED, Held et al. (2010), 42, CRISPR associated diversity within a population of Sulfolobus islandicus., 42, 2010
+25809535_MED, Meaden et al. (2015), 9, The cost of phage resistance in a plant pathogenic bacterium is context-dependent., 9, 2015
+24516719_MED, Beckett and Williams (2013), 14, Coevolutionary diversification creates nested-modular structure in phage-bacteria interaction networks., 14, 2013
+28327527_MED, Ruiz et al. (2017), 2, Emerging Interaction Patterns in the Emiliania huxleyi-EhV System., 2, 2017
+22934242_MED, Avrani et al. (2012), 19, Virus-host swinging party in the oceans: Incorporating biological complexity into paradigms of antagonistic coexistence., 19, 2012
+23417006_MED, Kimura et al. (2013), 11, Rapid microcystis cyanophage gene diversification revealed by long- and short-term genetic analyses of the tail sheath gene in a natural pond., 11, 2013
+29371652_MED, Fernández et al. (2018), 3, Phage or foe: an insight into the impact of viral predation on microbial communities., 3, 2018
+22558115_MED, Ogilvie et al. (2012), 22, Comparative (meta)genomic analysis and ecological profiling of human gut-specific bacteriophage φB124-14., 22, 2012
+22861500_MED, Töpper et al. (2013), 4, Effects of differences in organic supply on bacterial diversity subject to viral lysis., 4, 2013
+29457297_MED, Morella et al. (2018), 2, The impact of bacteriophages on phyllosphere bacterial abundance and composition., 2, 2018
+27920385_MED, Cairns et al. (2017), 6, Sublethal streptomycin concentrations and lytic bacteriophage together promote resistance evolution., 6, 2017
+23331773_MED, Vage et al. (2013), 23, Adding a cost of resistance description extends the ability of virus-host model to explain observed patterns in structure and function of pelagic microbial communities., 23, 2013
+24825894_MED, Thingstad et al. (2014), 35, A theoretical analysis of how strain-specific viruses can control microbial species diversity., 35, 2014
+27977892_MED, Cairns et al. (2017), 3, Genomic evolution of bacterial populations under coselection by antibiotics and phage., 3, 2017
+27573828_MED, Manrique et al. (2016), 57, Healthy human gut phageome., 57, 2016
+25024215_MED, Betts et al. (2014), 27, Contrasted coevolutionary dynamics between a bacterial pathogen and its bacteriophages., 27, 2014
+25387206_MED, Fiegna et al. (2015), 25, Evolution of species interactions determines microbial community productivity in new environments., 25, 2015
+27491926_MED, Sunderland et al. (2017), 11, Phage-Enabled Nanomedicine: From Probes to Therapeutics in Precision Medicine., 11, 2017
+26898162_MED, Frickel et al. (2016), 14, Eco-evolutionary dynamics in a coevolving host-virus system., 14, 2016
+26114300_MED, Perry et al. (2015), 9, The Molecular and Genetic Basis of Repeatable Coevolution between Escherichia coli and Bacteriophage T3 in a Laboratory Microcosm., 9, 2015
+28462927_MED, Martin et al. (2017), 5, De novo evolved interference competition promotes the spread of biofilm defectors., 5, 2017
+edgedef>node1 VARCHAR, node2 VARCHAR
+28649138_MED, 17166259_MED
+28462927_MED, 17166259_MED
+27491926_MED, 17166259_MED
+26898162_MED, 17166259_MED
+26248067_MED, 17166259_MED
+25730701_MED, 17166259_MED
+25387206_MED, 17166259_MED
+24617569_MED, 17166259_MED
+22963199_MED, 17166259_MED
+22558115_MED, 17166259_MED
+20393571_MED, 17166259_MED
+20197498_MED, 17166259_MED
+19834481_MED, 17166259_MED
+17320489_MED, 17166259_MED
+28649138_MED, 17166259_MED
+28462927_MED, 17166259_MED
+27491926_MED, 17166259_MED
+26898162_MED, 17166259_MED
+26248067_MED, 17166259_MED
+25730701_MED, 17166259_MED
+25387206_MED, 17166259_MED
+24617569_MED, 17166259_MED
+22963199_MED, 17166259_MED
+22558115_MED, 17166259_MED
+20393571_MED, 17166259_MED
+20197498_MED, 17166259_MED
+19834481_MED, 17166259_MED
+17320489_MED, 17166259_MED
+28327527_MED, 26898162_MED
+28282867_MED, 26898162_MED
+28611749_MED, 25730701_MED
+28072420_MED, 25730701_MED
+26743532_MED, 25730701_MED
+26195108_MED, 25730701_MED
+29457297_MED, 24617569_MED
+29371652_MED, 24617569_MED
+29076652_MED, 24617569_MED
+28649138_MED, 24617569_MED
+28440802_MED, 24617569_MED
+28342597_MED, 24617569_MED
+28282867_MED, 24617569_MED
+27977892_MED, 24617569_MED
+27920385_MED, 24617569_MED
+26898162_MED, 24617569_MED
+26248067_MED, 24617569_MED
+26441861_MED, 24617569_MED
+26114300_MED, 24617569_MED
+25809535_MED, 24617569_MED
+25922520_MED, 24617569_MED
+25827422_MED, 24617569_MED
+25024215_MED, 24617569_MED
+24671440_MED, 22963199_MED
+27573828_MED, 22558115_MED
+26441861_MED, 22558115_MED
+28945750_MED, 20393571_MED
+28680419_MED, 20393571_MED
+28085158_MED, 20393571_MED
+25535935_MED, 20393571_MED
+24550898_MED, 20393571_MED
+24616837_MED, 20393571_MED
+24348267_MED, 20393571_MED
+23407494_MED, 20393571_MED
+23212172_MED, 20393571_MED
+22355652_MED, 20393571_MED
+29371652_MED, 20197498_MED
+28611749_MED, 20197498_MED
+28440802_MED, 20197498_MED
+28327527_MED, 20197498_MED
+28072420_MED, 20197498_MED
+26743532_MED, 20197498_MED
+26195108_MED, 20197498_MED
+25827422_MED, 20197498_MED
+25730701_MED, 20197498_MED
+24999739_MED, 20197498_MED
+24825894_MED, 20197498_MED
+24617569_MED, 20197498_MED
+24590245_MED, 20197498_MED
+24516719_MED, 20197498_MED
+23987913_MED, 20197498_MED
+23798439_MED, 20197498_MED
+23608631_MED, 20197498_MED
+23417006_MED, 20197498_MED
+23331773_MED, 20197498_MED
+23178671_MED, 20197498_MED
+22861500_MED, 20197498_MED
+22934242_MED, 20197498_MED
+22457982_MED, 20197498_MED
+22004549_MED, 20197498_MED
+21687533_MED, 20197498_MED
+20927396_MED, 20197498_MED
+29457297_MED, 19834481_MED
+29076652_MED, 19834481_MED
+28945750_MED, 19834481_MED
+28680419_MED, 19834481_MED
+28440802_MED, 19834481_MED
+28085158_MED, 19834481_MED
+28072420_MED, 19834481_MED
+27573828_MED, 19834481_MED
+25809535_MED, 19834481_MED
+25922520_MED, 19834481_MED
+25535935_MED, 19834481_MED
+24999739_MED, 19834481_MED
+24825894_MED, 19834481_MED
+24671440_MED, 19834481_MED
+24617569_MED, 19834481_MED
+24590245_MED, 19834481_MED
+24550898_MED, 19834481_MED
+24616837_MED, 19834481_MED
+24348267_MED, 19834481_MED
+24516719_MED, 19834481_MED
+23798439_MED, 19834481_MED
+23608631_MED, 19834481_MED
+23417006_MED, 19834481_MED
+23407494_MED, 19834481_MED
+23331773_MED, 19834481_MED
+23178671_MED, 19834481_MED
+22861500_MED, 19834481_MED
+22934242_MED, 19834481_MED
+23212172_MED, 19834481_MED
+22457982_MED, 19834481_MED
+22355652_MED, 19834481_MED
+22004549_MED, 19834481_MED
+21687533_MED, 19834481_MED
+20927396_MED, 19834481_MED
+20393571_MED, 19834481_MED
+20197498_MED, 19834481_MED
+28342597_MED, 17320489_MED
+27977892_MED, 17320489_MED
+27920385_MED, 17320489_MED
+26114300_MED, 17320489_MED
+25922520_MED, 17320489_MED
+25827422_MED, 17320489_MED
+25024215_MED, 17320489_MED
+24825894_MED, 17320489_MED
+24671440_MED, 17320489_MED
+24617569_MED, 17320489_MED
+24516719_MED, 17320489_MED
+23987913_MED, 17320489_MED
