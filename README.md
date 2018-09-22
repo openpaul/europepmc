@@ -43,7 +43,9 @@ The load both files into gephi and color them differently to create a graph like
 
 ![An example graph showing a result produced by using this scripts output in gephi](examples/example.png?raw=true)
 
+In red are papers that were published citing the POI (white) and in blue are papers cited by this paper. Using gephi one can now explore the papers and find papers belonging to certain hubs or subnetworks.
 
+Creating graphs using several papers of a field might help find papers that one might have overlooked otherwise.
 
 ### Options explained
 Most options are self explanatory but some options are woth explaining:
