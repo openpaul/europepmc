@@ -30,16 +30,14 @@ python3 main.py PMC6132391 PMC myfancygraphfile
 ```
 
 ### Example
-If for example you are interested to see where a finding comes from and how it influenzed other research you could run the following steps. Here we look at the BLAST paper (https://europepmc.org/abstract/MED/2231712)
+If for example you are interested to see where a finding comes from and how it influenzed other research you could run the following steps.
 
 ```
 # look in the history of a paper
-python3 main.py 2231712 MED BLAST_example 
+python3 main.py 17166259 MED example/example_history 
 # look into the researched fostered by the paper
-python3 main.py 2231712 MED BLAST_example_future -f 1 # the one can be any value, this is a bug and should be addressed
+python3 main.py 17166259 MED example/example_future -f 1 # the one can be any value, this is a bug and should be addressed
 ```
-
-Running the second command will take quite some time, as BLAST was cited several thousand times and all of these papers will be looked at.
 
 The load both files into gephi and color them differently to create a graph like this one:
 
