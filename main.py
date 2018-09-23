@@ -81,7 +81,7 @@ class epmc:
         return(result)
         
 
-    def citations(self, id, cl = "MED"):
+    def citations(self, id, cl = "MED", paged = True):
         '''fetch al pubilcations that cited this one'''
         urlstring = "https://www.ebi.ac.uk/europepmc/webservices/rest/{}/{}/citations?pageSize={}&format=json".format(cl, id, self.limit)
         result = requests.get(url  = urlstring).json()
@@ -90,7 +90,7 @@ class epmc:
         if result["hitCount"] > self.limit:
             page = 1
             maxpages = math.ceil(result["hitCount"]/self.limit)
-            while len(result["citationList"]["citation"]) < result["hitCount"] or page <= maxpages:
+            while (len(result["citationList"]["citation"]) < result["hitCount"] or page <= maxpages) and paged:
                 page = page + 1
                 if self.debug:
                     print("on page {} of {}".format(page, maxpages))
@@ -120,7 +120,7 @@ class epmcBuffer:
         # create all tables that we need
         self.createTable()
         
-    def updateCitationCount(self, items ):
+    def updateCitationCount(self, items, paged = True ):
         '''for each paper update the citation count for future reference'''
         sql = "SELECT id, source, citedByDate FROM paper"
         res = self.c.execute(sql).fetchall()
@@ -147,7 +147,7 @@ class epmcBuffer:
                 print(r)
             if today - r[2] > (60*60* 24 * self.daylimit):
                 # fetch new from the interweb:
-                cits = self.citations(r[0], r[1])
+                cits = self.citations(r[0], r[1], paged)
 
                 i = i + 1
                 if i % 100 == 0:
@@ -247,7 +247,7 @@ class epmcBuffer:
             print("checked ", id, fetchFromWeb)
         return(refresults.fetchall())
 
-    def citations(self, id, source = "MED"):
+    def citations(self, id, source = "MED", paged = True):
         '''fetch and return a list of reference ids'''
         # check if id class combi is in databank
         self.c.execute('SELECT citRet FROM `paper` WHERE id=? AND source=?', (id, source))
@@ -276,7 +276,7 @@ class epmcBuffer:
         if fetchFromWeb:
             if self.verbose:
                 print("need to fetch citations of {} from web".format(id))
-            res = self.epmc.citations(id, source)
+            res = self.epmc.citations(id, source, paged = paged)
 
             citedBy = res["hitCount"]
             
@@ -499,7 +499,7 @@ def main():
         i = i + 1
         print("At step {} of {}".format(i, args.count))
     print("Database done, will now update citation counts for all papers")
-    e.updateCitationCount( items = list(set(toVisit)))
+    e.updateCitationCount( items = list(set(toVisit)), paged = False)
     # now that we have the data we can build a graph if we want
     g = Graph()
     G = graphml()
